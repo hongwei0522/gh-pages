@@ -352,6 +352,20 @@ table {
     text-align: center;
 }
 @media (min-width: 479px){
+    .bg5word3{
+        text-align: left;
+    }
+    .bg5word3 br{
+        content: "";
+        display: none;
+    }
+    .bg5word4{
+        text-align: left;
+    }
+    .bg5word4 br{
+        content: "";
+        display: none;
+    }
     .bg5word2{
         margin-left: 49.25%;
     }
@@ -403,5 +417,4 @@ table {
 .line{
     width: 30px;
 }
-
 
