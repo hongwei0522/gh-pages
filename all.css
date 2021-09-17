@@ -90,9 +90,9 @@ table {
     right: 0;
     top: 500px;
     opacity: 0.7;
-    transition: transform 1s ease;
+    transition: transform 3s ease;
 }
-.textgo:hover .textgo .textgo:focus{
+.textgo:hover{
     cursor: pointer;
     transform: translateY(-50%);
 }
