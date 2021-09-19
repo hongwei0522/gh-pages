@@ -1,13 +1,13 @@
-var btn = document.getElementById('x');
+var btn = document.getElementById('totop');
 
 btn.addEventListener("click", function() {
   var i = 3000;
   var int = setInterval(function() {
     window.scrollTo(0, i);
-    i -= 20
+    i -= i*0.04
     if (i <= 0) clearInterval(int);
   }, 20);
-})
+});
 
 
 
