@@ -5,9 +5,11 @@ btn.addEventListener("click", function() {
   var int = setInterval(function() {
     window.scrollTo(0, i);
     i -= i*0.04
-    if (i <= 0) clearInterval(int);
+    if (i <= 1) clearInterval(int)
+    return false;
   }, 20);
 });
+
 
 
 
