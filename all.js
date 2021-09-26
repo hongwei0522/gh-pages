@@ -22,9 +22,17 @@ window.addEventListener('scroll' , () => {
 });
 
 //settimeout loading畫面 https://medium.com/@AntheaLee/js-%E8%A8%88%E7%AE%97%E7%A7%92%E6%95%B8%E9%9A%B1%E8%97%8F%E7%89%A9%E4%BB%B6-f7b24f7e1a0
+
 setTimeout(function (){
-  document.getElementById("loading").style.display = "none";
+  document.getElementById("loading1").style.display = "none";
 },1000);
+setTimeout(function (){
+  document.getElementById("loading2").style.display = "none";
+},1000);
+setTimeout(function (){
+  document.getElementById("frontlogo").style.display = "none";
+},1000);
+
 
 //search 按鈕
 var search = document.getElementById('search');
