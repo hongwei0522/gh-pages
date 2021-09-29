@@ -56,8 +56,9 @@ table {
     display: flex;
     justify-content: center;
     padding-top: 200px;
-    transition: all 0.6s linear;
+    transition: all 3s linear;
     animation: transitionOut 1s ease-in;
+    animation-delay: 2s;
 }
 .loading2{
     z-index: 4;
@@ -69,8 +70,9 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s linear;
+    transition: all 3s linear;
     animation: transitionOut 1s ease-in;
+    animation-delay: 2s;
 }
 @keyframes transitionOut {
     100% {
@@ -83,7 +85,13 @@ table {
 .frontlogo{
     width: 300px;
     position: fixed;
-    transition: all 0.5s linear;
+    transition: all 3s linear;
+    animation : upanddown 2s ease-in;
+}
+@keyframes upanddown{
+    0%   {  margin-bottom: 300px; }
+    50%  {  margin-bottom: 200px; }
+    100% {  margin-bottom: 300px; }
 }
 
 .header{
