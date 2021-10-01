@@ -614,4 +614,18 @@ table {
         margin-top: 120px;
         margin-left: 40px;
     }
+    .inputText{
+        width: 80%;
+        margin-left: 45px;
+    }
+    .hideSearch{
+        width: 25px;
+        margin-left: 400px;
+        margin-top: 12px;
+    }
+    .microphone{
+        width: 25px;
+        margin-left: 365px;
+        margin-top: 12px;
+    }
 }
