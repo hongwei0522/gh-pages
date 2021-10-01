@@ -568,9 +568,26 @@ table {
     .title{
         width: 200px;
     }
-    
-
-
+    .bg1{
+        background-size: cover;
+    }
+    .bg2Title{
+        width: 479px;
+        justify-content: space-evenly;
+    }
+    .bg3{
+        padding: 100px 140px 100px 140px;
+    }
+    .bg3Block{
+        border:none;
+        border-bottom:1px solid rgb(26, 216, 211);
+        height: 500px;
+        padding-top: 20px;
+    }
+    .locationp{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
 
 
