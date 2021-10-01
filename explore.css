@@ -391,7 +391,123 @@ table {
     background: white;
 }
 
+.bg1{
+    max-width: 1519px;
+    height: 380px;
+    padding: 10px;
+    background-image: url(https://frankyeah.github.io/Front-Enter/images/contact-key.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg1word1{
+    font-size: 24px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    color: white;
+    background: rgb(128,128,128);
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 10px;
+    text-align: center;
+    width: 240px;
+    padding-left: 10px;
+    line-height: 44px;
+}
+.bg2{
+    max-width: 1519px;
+    box-shadow: 0 0 15px 0 rgb(199 199 199);
+}
+.bg2Title{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    color: rgb(128, 128, 128);
+    line-height: 70px;
+}
+.bg2Title li:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
 
+.bg3{
+    max-width: 1519px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 250px 100px 250px;
+}
+.bg3Block{
+    width: 310px;
+    height: 450px;
+    border: 1px solid rgb(26, 216, 211);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+.location{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.locationgif{
+    width: 17px;
+    height: 23px;
+    margin-right: 6px;
+}
+.locationmap{
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+}
+.locationimg{
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.locationh1{
+    color: rgb(26,216,211);
+    font-size: 26px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.locationp{
+    font-size: 16px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.loactionread{
+    color: rgb(26,216,212);
+    font-size: 16px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.locationmore{
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+}
 
 
 .footer{
@@ -457,7 +573,7 @@ table {
 
 
 
-    
+
     .footer{
         height: 120px;
         display: flex;
