@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="skillTree.css">
 </head>
 <body>
     <div class="loading1" id="loading1"></div>
@@ -49,45 +49,34 @@
         </ul>
     </div>
     <div class="hide4" id="hide4"></div>
+    <div class="white"></div>
     <div class="bg1">
-        <p class="bg1word1">FRONT-ENTER</p>
-        <p class="bg1word2">前端轉職資訊</p>
-        <img class="arrow" src="https://frankyeah.github.io/Front-Enter/images/next.svg" alt="箭頭">
+        <p class="bg1word1">技能樹</p>
     </div>
     <div class="bg2">
-        <p class="bg2word1">想知道自己適合什麼學習環境嗎？</p>
-        <p class="bg2word2">可以點擊按鈕測測看哦！</p>
-        <a><input type="button" value="測驗 GO" class="btn" id="btn"></a>
+        <UL class="bg2Title">
+            <li><p class="bg2word1">技能樹說明</p></li>
+            <li class="bg2word2"></li>
+            <li><p class="bg2word3">要成為一名稱職的前端，需要學會哪些技能呢？您不仿親自測試看看，自己已掌握了哪些能力。遊戲中，只需點擊按鈕回答問題，答對了，即能接續挑戰。</p></li>
+        </UL>
     </div>
     <div class="bg3">
-        <p class="bg3word1">教室精選</p>
-        <a href="https://school.appworks.tw/" target="_blank"><input type="button" value="AppWorks School" class="course"></a>
-        <a href="https://training.pada-x.com/" target="_blank"><input type="button" value="彭彭的課程教學" class="course"></a>
-        <a href="https://5xruby.tw/?gclid=Cj0KCQjwxdSHBhCdARIsAG6zhlXc_bI5eh55dXALPVA6KSqskIzT5ZA-97Hy7q7hQ7uHFL80MoG8VggaAg-JEALw_wcB" target="_blank"><input type="button" value="五倍紅寶石" class="course"></a>
-    </div>
-    <div class="bg4">
-        <div class="frame">
-            <p class="triangle"></p>
-            <img class="pen"  src="https://frankyeah.github.io/Front-Enter/images/FE_pen.png" alt="pen">
-            <p class="search1">探索</p>
-            <p class="border"></p>
-            <p class="text">我們提供公正的資訊，<br>幫您順利轉職，<br>並追蹤最新的業界動態。</p>
-            <input type="button" value="找學校" class="school">
-        </div>
-        <div class="frame">
-            <p class="triangle"></p>
-            <img class="pen2" src="https://frankyeah.github.io/Front-Enter/images/FE_pen.png" alt="pen2">
-            <p class="search2">技能樹</p>
-            <p class="border2"></p>
-            <p class="text2">前端包含哪些技術？<br>你又學會了哪些？<br>趕緊點進來試試看。</p>
-            <a href="skillTree.html"><input type="button" value="技能樹" class="school2"></a>
-        </div>
-    </div>
-    <div class="bg5">
-        <p class="bg5word1">關於</p>
-        <p class="bg5word2"></p>
-        <p class="bg5word3">近年來，社會對於軟體工程師的需求急速增加，全台各地的補習也如雨後<br>春筍般開業， 然而人的時間有限，要如何找到適合自己的學習環境？</p>
-        <p class="bg5word4">「Front-Enter」特別針對前端工程的學習資源，進行蒐集、分類， 期待<br>讓有志成為前端工程師的人，找到最適合自己的學習環境。</p>
+        <ul class="bg3Block">
+            <li><img class="smile" src="	https://frankyeah.github.io/Front-Enter/images/cute.svg" alt="smile"></li>
+            <li class="HTML style">HTML</li>
+            <li class="left"></li>
+            <li class="sbys"><p class="CSS style">CSS</p><span><p class="line"></p></span><span><p class="JS style">JS</p></span></li>
+            <li class="sbys"><p class="left lineSpace lineSpace2"></p><span><p class="straight"></p></span></li>
+            <li class="sbys"><p class="jQuery style space">jQuery</p><span><p class="RWD style">RWD</p></span></li>
+            <li class="left"></li>
+            <li class="GitHub style">GitHub</li>
+            <li class="sbys"><p class="left lineSpace"></p><span><p class="right"></p></span></li>
+            <li class="sbys"><p class="SCSS style space">SCSS</p><span><p class="Webpack style">Webpack</p></span></li>
+            <li class="sbys"><p class="straight lineSpace3"></p><span><p class="straight"></p></span></li>
+            <li class="sbys"><p class="bootstrap style space">bootstrap</p><span><p class="React style">React</p></span></li>
+            <li class="left"></li>
+            <li class="UnitTest style">Unit Test</li>
+        </ul>
     </div>
     <div class="button">
         <img class="top" id="totop" src="https://frankyeah.github.io/Front-Enter/images/FE_TOP.png" alt="top">
@@ -102,6 +91,6 @@
             </li>
         </ul>
     </div>
-    <script src="all.js"></script>
+    <script src="skillTree.js"></script>
 </body>
 </html>

@@ -52,3 +52,54 @@ hide2.addEventListener('click',function(){
     document.getElementById("hide").style.display = "none" ,
     document.getElementById("hide2").style.display = "none";
 })
+
+//Login
+var log = document.getElementById('log');
+
+log.addEventListener("click", function(){
+  if(document.getElementById("login").style.display == "none" && 
+      document.getElementById("hide3").style.display == "none")
+    document.getElementById("login").style.display = "block" ,
+    document.getElementById("hide3").style.display = "block";
+    else
+    document.getElementById("login").style.display = "none" ,
+    document.getElementById("hide3").style.display = "none";
+})
+
+var hide3 = document.getElementById('hide3');
+hide3.addEventListener('click',function(){
+    document.getElementById("login").style.display = "none" ,
+    document.getElementById("hide3").style.display = "none";
+})
+
+//testGo
+var testgo = document.getElementById('testgo');
+
+testgo.addEventListener("click", function(){
+  if(document.getElementById("test").style.display == "none" && 
+      document.getElementById("hide4").style.display == "none")
+    document.getElementById("test").style.display = "block" ,
+    document.getElementById("hide4").style.display = "block";
+    else
+    document.getElementById("test").style.display = "none" ,
+    document.getElementById("hide4").style.display = "none";
+})
+
+var btn = document.getElementById('btn');
+
+btn.addEventListener("click", function(){
+  if(document.getElementById("test").style.display == "none" && 
+      document.getElementById("hide4").style.display == "none")
+    document.getElementById("test").style.display = "block" ,
+    document.getElementById("hide4").style.display = "block";
+    else
+    document.getElementById("test").style.display = "none" ,
+    document.getElementById("hide4").style.display = "none";
+})
+
+var hide4 = document.getElementById('hide4');
+hide4.addEventListener('click',function(){
+    document.getElementById("test").style.display = "none" ,
+    document.getElementById("hide4").style.display = "none";
+})
+
