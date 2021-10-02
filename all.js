@@ -25,13 +25,13 @@ window.addEventListener('scroll' , () => {
 
 setTimeout(function (){
   document.getElementById("loading1").style.display = "none";
-},3000);
+},2000);
 setTimeout(function (){
   document.getElementById("loading2").style.display = "none";
-},3000);
+},2000);
 setTimeout(function (){
   document.getElementById("frontlogo").style.display = "none";
-},3000);
+},2000);
 
 
 //search 按鈕

@@ -57,9 +57,9 @@ table {
     flex-direction: column;
     justify-content: center;
     padding-top: 200px;
-    transition: all 3s linear;
+    transition: all 1s linear;
     animation: transitionOut 1s ease-in;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .loading2{
     z-index: 4;
@@ -71,9 +71,9 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 3s linear;
+    transition: all 1s linear;
     animation: transitionOut 1s ease-in;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 @keyframes transitionOut {
     100% {
@@ -86,8 +86,8 @@ table {
 .frontlogo{
     width: 300px;
     position: fixed;
-    transition: all 3s linear;
-    animation : upanddown 2s ease-in;
+    transition: all 1s linear;
+    animation : upanddown 1s ease-in;
 }
 @keyframes upanddown{
     0%   {  margin-bottom: 100px; }
@@ -440,7 +440,8 @@ table {
     max-width: 1519px;
     display: flex;
     flex-wrap: wrap;
-    padding: 100px 250px 100px 250px;
+    justify-content: center;
+    padding: 100px 200px 100px;
 }
 .bg3Block{
     width: 310px;
@@ -583,10 +584,6 @@ table {
         border-bottom:1px solid rgb(26, 216, 211);
         height: 500px;
         padding-top: 20px;
-    }
-    .locationp{
-        padding-left: 0px;
-        padding-right: 0px;
     }
 
 
