@@ -319,6 +319,16 @@ table {
     z-index: 2;
     position: fixed;
 }
+.testText2{
+    width: 350px;
+    height: 430px;
+    position: fixed;
+    background-image: url(https://frankyeah.github.io/Front-Enter/images/Staff-Selection-.jpg);
+    border-radius: 5px;
+    margin-top: 170px;
+    margin-left: 580px;
+    opacity: 0.7;
+}
 .testText{
     width: 350px;
     height: 430px;
@@ -326,6 +336,9 @@ table {
     display: flex;
     flex-direction: column;
     background: rgb(26,216,211);
+    background-position-x: top;
+    background-position-y: center;
+    background-size: cover;
     border-radius: 5px;
     margin-top: 170px;
     margin-left: 580px;
@@ -630,6 +643,10 @@ table {
     .loginTitle{
         margin-top: 120px;
         margin-left: 60px;
+    }
+    .testText2{
+        margin-top: 120px;
+        margin-left: 40px;
     }
     .testText{
         margin-top: 120px;
