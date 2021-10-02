@@ -171,7 +171,7 @@ table {
 .inputText{
     width: 60%;
     display: block;
-    margin: 0 auto;
+    margin-left: 20%;
     line-height: 50px;
     font-size: 32px;
     border-radius: 20px;
@@ -181,7 +181,7 @@ table {
 }
 .hideSearch{
     width: 30px;
-    margin-left: 1175px;
+    margin-left: 78%;
     margin-top: 10px;
     position: absolute;
 }
@@ -190,7 +190,7 @@ table {
 }
 .microphone{
     width: 30px;
-    margin-left: 1135px;
+    margin-left: 75%;
     margin-top: 10px;
     position: absolute;
 }
@@ -212,7 +212,7 @@ table {
     border-radius: 5px;
     border: 1px solid #979797;
     margin-top: 170px;
-    margin-left: 580px;
+    margin-left: 38%;
 }
 .loginLogo{
     width: 225px;
@@ -326,7 +326,7 @@ table {
     background-image: url(https://frankyeah.github.io/Front-Enter/images/Staff-Selection-.jpg);
     border-radius: 5px;
     margin-top: 170px;
-    margin-left: 580px;
+    margin-left: 38%;
     opacity: 0.7;
 }
 .testText{
@@ -341,7 +341,7 @@ table {
     background-size: cover;
     border-radius: 5px;
     margin-top: 170px;
-    margin-left: 580px;
+    margin-left: 38%;
     opacity: 0.9;
 }
 .testh1{
@@ -405,9 +405,8 @@ table {
 }
 
 .bg1{
-    max-width: 1519px;
+    width: 100%;
     height: 380px;
-    padding: 10px;
     background-image: url(https://frankyeah.github.io/Front-Enter/images/contact-key.jpg);
     background-repeat: no-repeat;
     background-position-x: center;
@@ -431,7 +430,7 @@ table {
     line-height: 44px;
 }
 .bg2{
-    max-width: 1519px;
+    width: 100%;
     box-shadow: 0 0 15px 0 rgb(199 199 199);
 }
 .bg2Title{
@@ -450,14 +449,15 @@ table {
 }
 
 .bg3{
-    max-width: 1519px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 200px 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .bg3Block{
-    width: 310px;
+    width: 370px;
     height: 450px;
     border: 1px solid rgb(26, 216, 211);
     margin-right: 20px;
@@ -505,8 +505,8 @@ table {
     line-height: 24px;
     cursor: pointer;
     margin-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 .loactionread{
     color: rgb(26,216,212);
