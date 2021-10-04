@@ -412,21 +412,15 @@ table {
 .bgc{
     width: 100%;
     height: 380px;
-    animation-name: bgc;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: relative;
-}
-@keyframes bgc {
-    0%  {   background: url(https://frankyeah.github.io/Front-Enter/images/contact-key.jpg) 50% 50% /cover no-repeat;}
-    25%  {  background: url(https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-3.jpg?alt=media&token=8f7f8f02-5066-452a-863c-a4e715d2657a) 50% 50% /cover no-repeat;}
-    50% {   background: url(https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-2.jpg?alt=media&token=f28dbea4-af0c-4743-a75a-426198fe409e) 50% 50% /cover no-repeat;}
-    75% {  background: url(https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-3.jpg?alt=media&token=8f7f8f02-5066-452a-863c-a4e715d2657a) 50% 50% /cover no-repeat;}
-    100% {   background: url(https://frankyeah.github.io/Front-Enter/images/contact-key.jpg) 50% 50% /cover no-repeat;}
+    background: url(https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-1.jpg?alt=media&token=059f5677-409b-4fc1-a772-baf1dece5063);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .bg1word1{
     font-size: 24px;
     font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    font-weight: bolder;
     color: white;
     background: rgb(128,128,128);
     opacity: 0.7;
@@ -439,114 +433,96 @@ table {
     line-height: 44px;
     position: absolute;
 }
-.bg2{
+.courseContent{
     width: 100%;
-    box-shadow: 0 0 15px 0 rgb(199 199 199);
-}
-.bg2Title{
-    width: 700px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
-    color: rgb(128, 128, 128);
-    line-height: 70px;
-}
-.bg2Title li:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.bg3{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-top: 100px;
-    margin-bottom: 100px;
 }
-.bg3Block{
-    width: 370px;
-    height: 450px;
-    border: 1px solid rgb(26, 216, 211);
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding-top: 50px;
-}
-.location{
-    text-align: center;
+.courseImg{
+    width: 40%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-.locationgif{
-    width: 17px;
-    height: 23px;
-    margin-right: 6px;
-}
-.locationmap{
-    cursor: pointer;
-    font-size: 16px;
-    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
-}
-.locationimgover{
-    width: 200px;
-    height: 150px;
-    overflow: hidden;
+.imgs{
+    width: 400px;
+    height: 266px;
+    margin: 20px auto;
     border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-}
-.locationimg{
-    width: 200px;
-    height: 150px;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
     cursor: pointer;
-    transform: scale(1,1);
-    transition: all 0.5s ease-out;
 }
-.locationimg:hover{
-    transform: scale(1.2,1.2);
-    opacity: 0.7;
+.courseText{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
-.locationh1{
-    color: rgb(26,216,211);
-    font-size: 26px;
-    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
-    text-align: center;
-    line-height: 38px;
-    cursor: pointer;
-    margin-top: 30px;
+.courseH1{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
-.locationp{
-    font-size: 16px;
-    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
-    text-align: center;
-    line-height: 24px;
-    cursor: pointer;
-    margin-top: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-.loactionread{
-    color: rgb(26,216,212);
-    font-size: 16px;
-    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
-    text-align: center;
-    line-height: 24px;
-    cursor: pointer;
+.courseh1{
     margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(26,216,211);
+    text-align: left;
+    line-height: 8px;
+    letter-spacing: 3px;
 }
-.locationmore{
-    margin-left: 5px;
-    width: 10px;
-    height: 10px;
+.coursep{
+    width: 80%;
+    margin-top: 40px;
+    font-size: 16px;
+    color: rgb(128,128,128);
+    text-align-last: left;
+    line-height: 28px;
+    letter-spacing: 3px;
 }
-
+.courseTidy{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.tidy{
+    font-size: 18px;
+    color: rgb(26, 216, 211);
+    text-align: center;
+    line-height: 8px;
+    letter-spacing: 3px;
+}
+.border{
+    width: 20px;
+    border-bottom: 1px solid rgb(26, 216, 211);
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.text{
+    font-size: 16px;
+    color: rgb(26,216,211);
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.text2{
+    margin-left: 70px;
+    font-size: 16px;
+    font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+    color: rgb(128,128,128);
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+.border2{
+    width: 400px;
+    border-bottom: 1px solid rgb(128,128,128);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 .footer{
     background: #ececec;
@@ -584,6 +560,7 @@ table {
     width: 30px;
 }
 
+
 @media (max-width: 479px){
     .inputText{
         width: 80%;
@@ -609,18 +586,7 @@ table {
     .bg1{
         background-size: cover;
     }
-    .bg2Title{
-        width: 479px;
-        justify-content: space-evenly;
-    }
-    .bg3Block{
-        width: 310px;
-        margin-right: none;
-        border:none;
-        border-bottom:1px solid rgb(26, 216, 211);
-        height: 500px;
-        padding-top: 20px;
-    }
+    
 
 
 
