@@ -451,6 +451,12 @@ table {
     margin: 20px auto;
     border-radius: 5px;
     cursor: pointer;
+    transform: scale(1,1);
+    transition-duration: 1s;
+}
+.imgs:hover{
+    transform: scale(1.05,1.05);
+    transition: all 1s ease-in-out;
 }
 .courseText{
     width: 60%;

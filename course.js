@@ -91,13 +91,22 @@ window.addEventListener('scroll' , () => {
       document.getElementById("hide4").style.display = "none";
   })
 
-
-
-  //course API
-  axios.get('https://front-enter.firebaseio.com/list.json')
-.then(function (response) {
-  let ary = response.data;
-  console.log(ary[0].name);
-  const title = document.querySelector(".title");
-  title.textContent = ary[0].name;
-});
+//JSON
+    const course_url = 'https://front-enter.firebaseio.com/list.json';
+        async function getISS() {
+            const response = await fetch(course_url);
+            const data = await response.json();
+            
+            document.getElementById('bg1word1').textContent = data[0].name;
+            document.getElementById('coursep').innerHTML = data[0].content;
+            document.getElementById('city').textContent = data[0].city;
+            document.getElementById('classType').textContent = data[0].classType;
+            document.getElementById('teachWay').textContent = data[0].teachWay;
+            document.getElementById('totalDay').textContent = data[0].totalDay;
+            document.getElementById('weekHour').textContent = data[0].weekHour;
+            document.getElementById('technology').textContent = data[0].technology;
+            document.getElementById('mail').textContent = data[0].mail;
+            document.getElementById('phone').textContent = data[0].phone;
+        }
+        getISS()
+    
