@@ -109,4 +109,30 @@ window.addEventListener('scroll' , () => {
             document.getElementById('phone').textContent = data[0].phone;
         }
         getISS()
+
+//輪播器
+  window.onload = function(){
+    var slide = document.getElementById('slide');
+    var slideLeft = document.getElementById('slideLeft');
+    var slideRight = document.getElementById('slideRight');
+    function animate(offset){
+      var newLeft = parseInt(slide.style.left) + offset;
+      slide.style.left = newLeft + 'px';
+      if(newLeft < -3000 ){
+        slide.style.left = 0 + 'px';
+      }
+      if(newLeft > 0 ){
+        slide.style.left = -3000 + 'px';
+      }
+    }
+    slideLeft.onclick = function(){
+      animate(750);
+    }
+    slideRight.onclick = function(){
+      animate(-750);
+    }
+  }
+  
+  
+
     

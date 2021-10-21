@@ -404,6 +404,57 @@ table {
     background: white;
 }
 
+.container{
+    z-index: 2;
+    width: 750px;
+    height: 550px;
+    position: fixed;
+    left: 25%;
+    top: 13.6%;
+    overflow: hidden;
+}
+.slide{
+    position: absolute;
+    width: 5250px;
+    height: 550px;
+}
+.slideimg{
+    float: left;
+    width: 750px;
+    height: 550px;
+}
+.slideLeft{
+    width: 50px;
+    height: 50px;
+    background-image: url(https://frankyeah.github.io/Front-Enter/images/right-arrow.png);
+    background-size: cover;
+    position: fixed;
+    cursor: pointer;
+    left: 21%;
+    top: 50%;
+    z-index: 2;
+    transform: rotate(180deg);
+}
+.slideRight{
+    width: 50px;
+    height: 50px;
+    background-image: url(https://frankyeah.github.io/Front-Enter/images/right-arrow.png);
+    background-size: cover;
+    position: fixed;
+    cursor: pointer;
+    left: 75%;
+    top: 50%;
+    z-index: 2;
+}
+.slidebg{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 1;
+}
+
 .bg1{
     display: flex;
     justify-content: center;
