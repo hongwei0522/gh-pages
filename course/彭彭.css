@@ -409,9 +409,11 @@ table {
     width: 750px;
     height: 550px;
     position: fixed;
+    background-position: center;
     left: 25%;
     top: 13.6%;
     overflow: hidden;
+    display: none;
 }
 .slide{
     position: absolute;
@@ -453,6 +455,7 @@ table {
     opacity: 0.7;
     position: fixed;
     z-index: 1;
+    display: none;
 }
 
 .bg1{
@@ -515,11 +518,9 @@ table {
     flex-direction: column;
 }
 .courseH1{
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    
-    
 }
 .courseh1{
     margin-top: 20px;
@@ -531,7 +532,7 @@ table {
     letter-spacing: 3px;
 }
 .coursep{
-    width: 80%;
+    width: 90%;
     margin-top: 40px;
     font-size: 16px;
     color: rgb(128,128,128);
@@ -643,8 +644,52 @@ table {
     .bg1{
         background-size: cover;
     }
-    
-
+    .courseContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgrwd{
+        display: none;
+    }
+    .imgs{
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .courseText{
+        width: 80%;
+    }
+    .border2{
+        width: 350px;
+    }
+    .text2{
+        margin-left: 20px;
+    }
+    .bg1word1{
+        padding-left: 0px;
+    }
+    .container{
+        width: 300px;
+        height: 300px;
+    }
+    .slide{
+        width: 2100px;
+    }
+    .slideimg{
+        width: 300px;
+        height: 300px;
+    }
+    .slideLeft{
+        left: 10%;
+        top: 30%;
+    }
+    .slideRight{
+        left: 90%;
+        top: 30%;
+    }
 
 
     .footer{

@@ -132,7 +132,82 @@ window.addEventListener('scroll' , () => {
       animate(-750);
     }
   }
-  
-  
+  var img1 = document.getElementById('img1');
+  img1.addEventListener("click", function(){
+    if(document.getElementById("container").style.display == "none" && 
+        document.getElementById("slidebg").style.display == "none")
+      document.getElementById("container").style.display = "block" ,
+      document.getElementById("slidebg").style.display = "block";
+      else
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  var slidebg = document.getElementById('slidebg');
+  slidebg.addEventListener('click',function(){
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
 
+  var img2 = document.getElementById('img2');
+  img2.addEventListener("click", function(){
+    if(document.getElementById("container").style.display == "none" && 
+        document.getElementById("slidebg").style.display == "none")
+      document.getElementById("container").style.display = "block" ,
+      document.getElementById("slidebg").style.display = "block";
+      else
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  var slidebg = document.getElementById('slidebg');
+  slidebg.addEventListener('click',function(){
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  
+  var img3 = document.getElementById('img3');
+  img3.addEventListener("click", function(){
+    if(document.getElementById("container").style.display == "none" && 
+        document.getElementById("slidebg").style.display == "none")
+      document.getElementById("container").style.display = "block" ,
+      document.getElementById("slidebg").style.display = "block";
+      else
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  var slidebg = document.getElementById('slidebg');
+  slidebg.addEventListener('click',function(){
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+
+  var img4 = document.getElementById('img4');
+  img4.addEventListener("click", function(){
+    if(document.getElementById("container").style.display == "none" && 
+        document.getElementById("slidebg").style.display == "none")
+      document.getElementById("container").style.display = "block" ,
+      document.getElementById("slidebg").style.display = "block";
+      else
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  var slidebg = document.getElementById('slidebg');
+  slidebg.addEventListener('click',function(){
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
     
+  var img5 = document.getElementById('img5');
+  img5.addEventListener("click", function(){
+    if(document.getElementById("container").style.display == "none" && 
+        document.getElementById("slidebg").style.display == "none")
+      document.getElementById("container").style.display = "block" ,
+      document.getElementById("slidebg").style.display = "block";
+      else
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
+  var slidebg = document.getElementById('slidebg');
+  slidebg.addEventListener('click',function(){
+      document.getElementById("container").style.display = "none" ,
+      document.getElementById("slidebg").style.display = "none";
+  })
