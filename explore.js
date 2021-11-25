@@ -90,3 +90,53 @@ window.addEventListener('scroll' , () => {
       document.getElementById("test").style.display = "none" ,
       document.getElementById("hide4").style.display = "none";
   })
+
+  //全部 小班制 放養制 一對一
+  var allclass = document.getElementById('allclass');
+  var smallclass = document.getElementById('smallclass');
+  var stockclass = document.getElementById('stockclass');
+  var oneclass = document.getElementById('oneclass');
+  var classPeng = document.getElementById('classPeng');
+  var classFeiken = document.getElementById('classFeiken');
+  var classNTU = document.getElementById('classNTU');
+  var calssHeCai = document.getElementById('classHeCai');
+  var classAppworks = document.getElementById('classAppworks');
+  var classhexschool = document.getElementById('classhexschool');
+  var class5xruby = document.getElementById('class5xruby');
+  var classUdemy = document.getElementById('classUdemy');
+  var classUXabc = document.getElementById('classUXabc');
+  var smallclasses = document.getElementById('bg3').getElementsByTagName('ul');
+
+  allclass.addEventListener('click',function(){
+    classPeng.removeChild(classPeng);
+    classFeiken.removeChild(classFeiken);
+    classNTU.removeChild(classNTU);
+    classHeCai.removeChild(classHeCai);
+    classAppworks.removeChild(classAppworks);
+    classhexschool.removeChild(classhexschool);
+    class5xruby.removeChild(class5xruby);
+    classUdemy.removeChild(classUdemy);
+    classUXabc.removeChild(classUXabc);
+  })
+  smallclass.addEventListener('click',function(){
+    classPeng.parentNode.removeChild(classPeng);
+    classFeiken.parentNode.removeChild(classFeiken);
+    classhexschool.parentNode.removeChild(classhexschool);
+    classUdemy.parentNode.removeChild(classUdemy);
+  })
+  stockclass.addEventListener('click',function(){
+    classPeng.parentNode.removeChild(classPeng);
+    classFeiken.parentNode.removeChild(classFeiken);
+    classNTU.parentNode.removeChild(classNTU);
+    classhexschool.parentNode.removeChild(classhexschool);
+    class5xruby.parentNode.removeChild(class5xruby);
+    classUXabc.parentNode.removeChild(classUXabc);
+  })
+  oneclass.addEventListener('click',function(){
+    classFeiken.parentNode.removeChild(classFeiken);
+    classNTU.parentNode.removeChild(classNTU);
+    classHeCai.parentNode.removeChild(classHeCai);
+    classAppworks.parentNode.removeChild(classAppworks);
+    class5xruby.parentNode.removeChild(class5xruby);
+    classUXabc.parentNode.removeChild(classUXabc);
+  })

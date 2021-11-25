@@ -457,6 +457,9 @@ table {
     opacity: 0.7;
     cursor: pointer;
 }
+.bg2Title li:active{
+    color: rgb(26, 216, 211);
+}
 
 .bg3{
     width: 100%;
