@@ -97,9 +97,14 @@ window.addEventListener('scroll' , () => {
             const response = await fetch(course_url);
             const dataAll = await response.json();
             
+            // console.log(location.searchParams.toString()); 
+            
             function courseUrl(){
               for (var i = 0; i < dataAll.length; i++){
                 var courseHref = "?tid=" + dataAll[i].creatTime
+                // console.log(dataAll[i].name)
+                
+                
                 if(courseHref == location.search){
                 document.getElementById('bg1word1').textContent = dataAll[i].name;
                 document.getElementById('coursep').innerHTML = dataAll[i].content;
@@ -111,6 +116,7 @@ window.addEventListener('scroll' , () => {
                 document.getElementById('technology').textContent = dataAll[i].technology;
                 document.getElementById('mail').textContent = dataAll[i].mail;
                 document.getElementById('phone').textContent = dataAll[i].phone;
+                
               }
               }
             }

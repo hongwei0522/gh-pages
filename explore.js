@@ -115,13 +115,12 @@ window.addEventListener('scroll' , () => {
           var ul = document.createElement("UL");
           var a = document.createElement("a");
           var exploreHref = "./course.html?tid=";
-          var exploreHtml = exploreHref + dataAll[j].creatTime;
+          var exploreHtml = exploreHref + dataSelect[j].creatTime;
           a.href = exploreHtml;
           ul.className = "bg3Block";
           a.className = "bg3Blocka";
           var text = "node";
           var node = "";
-
           for ( var i = 0 ; i < 5 ; i++ ){
             node +=  text +i;
             var node = document.createElement("LI");
