@@ -95,18 +95,26 @@ window.addEventListener('scroll' , () => {
     const course_url = 'https://front-enter.firebaseio.com/list.json';
         async function getISS() {
             const response = await fetch(course_url);
-            const data = await response.json();
+            const dataAll = await response.json();
             
-            document.getElementById('bg1word1').textContent = data[0].name;
-            document.getElementById('coursep').innerHTML = data[0].content;
-            document.getElementById('city').textContent = data[0].city;
-            document.getElementById('classType').textContent = data[0].classType;
-            document.getElementById('teachWay').textContent = data[0].teachWay;
-            document.getElementById('totalDay').textContent = data[0].totalDay;
-            document.getElementById('weekHour').textContent = data[0].weekHour;
-            document.getElementById('technology').textContent = data[0].technology;
-            document.getElementById('mail').textContent = data[0].mail;
-            document.getElementById('phone').textContent = data[0].phone;
+            function courseUrl(){
+              for (var i = 0; i < dataAll.length; i++){
+                var courseHref = "?tid=" + dataAll[i].creatTime
+                if(courseHref == location.search){
+                document.getElementById('bg1word1').textContent = dataAll[i].name;
+                document.getElementById('coursep').innerHTML = dataAll[i].content;
+                document.getElementById('city').textContent = dataAll[i].city;
+                document.getElementById('classType').textContent = dataAll[i].classType;
+                document.getElementById('teachWay').textContent = dataAll[i].teachWay;
+                document.getElementById('totalDay').textContent = dataAll[i].totalDay;
+                document.getElementById('weekHour').textContent = dataAll[i].weekHour;
+                document.getElementById('technology').textContent = dataAll[i].technology;
+                document.getElementById('mail').textContent = dataAll[i].mail;
+                document.getElementById('phone').textContent = dataAll[i].phone;
+              }
+              }
+            }
+              courseUrl()  
         }
         getISS()
 

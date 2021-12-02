@@ -477,6 +477,10 @@ table {
     margin-bottom: 20px;
     padding-top: 50px;
 }
+.bg3Blocka{
+    text-decoration: none;
+    color: black;
+}
 .location{
     text-align: center;
     display: flex;
