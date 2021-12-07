@@ -91,7 +91,7 @@ window.addEventListener('scroll' , () => {
       document.getElementById("hide4").style.display = "none";
   })
 
-  
+
   //JSON
   var dataAll = null
   var bg3 = document.getElementById('bg3')
@@ -100,11 +100,48 @@ window.addEventListener('scroll' , () => {
   async function getISS() {
     const response = await fetch(course_url);
     dataAll = await response.json();
-    createSelectElement(dataAll, dataAll.length)
+    let inputText = (new URL(document.location)).searchParams.get('tid');
+    var selectData = []
+
+    for(var i = 0; i < 9; i++) {
+      var foundName = dataAll[i].name.match(inputText);
+      var foundCity = dataAll[i].city.match(inputText);
+      var foundClasstype = dataAll[i].classType.match(inputText);
+      if(foundName) {        
+        if(dataAll[i].name == foundName.input) {
+          selectData.push(dataAll[i])
+        }
+      }else if(foundCity){
+        if(dataAll[i].city == foundCity.input) {
+          selectData.push(dataAll[i])
+        }
+      }else if(foundClasstype) {
+        if(dataAll[i].classType == foundClasstype.input) {
+          selectData.push(dataAll[i])
+        }
+      }
+    }
+    console.log(selectData)
+    if(inputText) {
+      createSelectElement(selectData, selectData.length)
+    } else {
+      createSelectElement(dataAll, dataAll.length)
+    }
   }
 
   getISS()    
 
+//search
+var hideSearch = document.getElementById("hideSearch");
+
+hideSearch.addEventListener("click", function(){
+  var inputText = document.getElementById("inputText").value;
+  var exploreHref = "./explore.html?tid=";
+  var exploreHtml = exploreHref + inputText;
+    window.location = exploreHtml
+  })
+
+//課程
   function createSelectElement(dataAll, length) {
     for (var j = 0; j < length; j++){
       classes(dataAll, j)
@@ -114,9 +151,9 @@ window.addEventListener('scroll' , () => {
         function classes(dataSelect, j){
           var ul = document.createElement("UL");
           var a = document.createElement("a");
-          var exploreHref = "./course.html?tid=";
-          var exploreHtml = exploreHref + dataSelect[j].creatTime;
-          a.href = exploreHtml;
+          var explorehref = "./course.html?tid=";
+          var explorehtml = explorehref + dataSelect[j].creatTime;
+          a.href = explorehtml;
           ul.className = "bg3Block";
           a.className = "bg3Blocka";
           var text = "node";

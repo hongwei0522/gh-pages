@@ -103,3 +103,16 @@ hide4.addEventListener('click',function(){
     document.getElementById("hide4").style.display = "none";
 })
 
+//search功能
+// 1.點按鈕跳到explore
+// 2.篩選資料 地點 名字 類別
+var hideSearch = document.getElementById("hideSearch");
+
+hideSearch.addEventListener("click", function(){
+  var inputText = document.getElementById("inputText").value;
+  var exploreHref = "./explore.html?tid=";
+  var exploreHtml = exploreHref + inputText;
+    window.location = exploreHtml
+    console.log(inputText)
+  })
+
