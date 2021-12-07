@@ -85,9 +85,9 @@ testgo.addEventListener("click", function(){
     document.getElementById("hide4").style.display = "none";
 })
 
-var btn = document.getElementById('btn');
+var hide4 = document.getElementById('hide4');
 
-btn.addEventListener("click", function(){
+hide4.addEventListener("click", function(){
   if(document.getElementById("test").style.display == "none" && 
       document.getElementById("hide4").style.display == "none")
     document.getElementById("test").style.display = "block" ,
