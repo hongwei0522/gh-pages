@@ -674,6 +674,7 @@ table {
     .container{
         width: 300px;
         height: 300px;
+        left: 20%;
     }
     .slide{
         width: 2100px;
@@ -681,13 +682,14 @@ table {
     .slideimg{
         width: 300px;
         height: 300px;
+        margin-top: 15px;
     }
     .slideLeft{
         left: 10%;
         top: 30%;
     }
     .slideRight{
-        left: 90%;
+        left: 83%;
         top: 30%;
     }
 

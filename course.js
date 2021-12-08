@@ -10,8 +10,6 @@
               for (var i = 0; i < dataAll.length; i++){
                 var courseHref = "?tid=" + dataAll[i].creatTime
                 // console.log(dataAll[i].name)
-                
-                
                 if(courseHref == location.search){
                 document.getElementById('bg1word1').textContent = dataAll[i].name;
                 document.getElementById('coursep').innerHTML = dataAll[i].content;
@@ -23,7 +21,6 @@
                 document.getElementById('technology').textContent = dataAll[i].technology;
                 document.getElementById('mail').textContent = dataAll[i].mail;
                 document.getElementById('phone').textContent = dataAll[i].phone;
-                
               }
               }
             }
@@ -32,29 +29,49 @@
         getISS()
 
 //輪播器
-  window.onload = function(){
-    var slide = document.getElementById('slide');
-    var slideLeft = document.getElementById('slideLeft');
-    var slideRight = document.getElementById('slideRight');
-    function animate(offset){
-      var newLeft = parseInt(slide.style.left) + offset;
-      slide.style.left = newLeft + 'px';
-      if(newLeft < -3000 ){
-        slide.style.left = 0 + 'px';
+  var slideLeft = document.getElementById("slideLeft");
+  var slideRight = document.getElementById("slideRight");
+  var slideimg = document.getElementById("slideimg");
+  var currentslideimg = 1;
+
+  slideLeft.addEventListener("click", function(){
+    currentslideimg--;
+      if(currentslideimg == 0){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
+        currentslideimg = 5;
+      }else if(currentslideimg == 4){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
+      }else if(currentslideimg == 3){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
+      }else if(currentslideimg == 2){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
+      }else if(currentslideimg == 1){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
       }
-      if(newLeft > 0 ){
-        slide.style.left = -3000 + 'px';
+  })
+
+  slideRight.addEventListener("click", function(){
+    currentslideimg++;
+      if(currentslideimg == 0){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
+      }else if(currentslideimg == 4){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
+        currentslideimg = -1;
+      }else if(currentslideimg == 3){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
+      }else if(currentslideimg == 2){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
+      }else if(currentslideimg == 1){
+        slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
       }
-    }
-    slideLeft.onclick = function(){
-      animate(750);
-    }
-    slideRight.onclick = function(){
-      animate(-750);
-    }
-  }
+  })
+
+
+
   var img1 = document.getElementById('img1');
   img1.addEventListener("click", function(){
+    currentslideimg = 1;
+    slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
     if(document.getElementById("container").style.display == "none" && 
         document.getElementById("slidebg").style.display == "none")
       document.getElementById("container").style.display = "block" ,
@@ -71,6 +88,8 @@
 
   var img2 = document.getElementById('img2');
   img2.addEventListener("click", function(){
+    currentslideimg = 2;
+    slideimg.setAttribute("src",'https://frankyeah.github.io/Front-Enter/images/13.jpg');
     if(document.getElementById("container").style.display == "none" && 
         document.getElementById("slidebg").style.display == "none")
       document.getElementById("container").style.display = "block" ,
@@ -87,6 +106,8 @@
   
   var img3 = document.getElementById('img3');
   img3.addEventListener("click", function(){
+    currentslideimg = 3;
+  slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
     if(document.getElementById("container").style.display == "none" && 
         document.getElementById("slidebg").style.display == "none")
       document.getElementById("container").style.display = "block" ,
@@ -103,6 +124,8 @@
 
   var img4 = document.getElementById('img4');
   img4.addEventListener("click", function(){
+    currentslideimg = 4;
+    slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
     if(document.getElementById("container").style.display == "none" && 
         document.getElementById("slidebg").style.display == "none")
       document.getElementById("container").style.display = "block" ,
@@ -119,6 +142,8 @@
     
   var img5 = document.getElementById('img5');
   img5.addEventListener("click", function(){
+    currentslideimg = 0;
+    slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
     if(document.getElementById("container").style.display == "none" && 
         document.getElementById("slidebg").style.display == "none")
       document.getElementById("container").style.display = "block" ,
