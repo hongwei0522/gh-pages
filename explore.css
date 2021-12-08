@@ -617,7 +617,7 @@ table {
         background-size: cover;
     }
     .bg2Title{
-        width: 479px;
+        width: 100%;
         justify-content: space-evenly;
     }
     .bg3Block{

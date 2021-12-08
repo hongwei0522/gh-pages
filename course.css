@@ -674,7 +674,9 @@ table {
     .container{
         width: 300px;
         height: 300px;
-        left: 20%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .slide{
         width: 2100px;
@@ -685,12 +687,13 @@ table {
         margin-top: 15px;
     }
     .slideLeft{
-        left: 10%;
-        top: 30%;
+        left: 0%;
+        top: 46%;
+        
     }
     .slideRight{
-        left: 83%;
-        top: 30%;
+        right: 0%;
+        top: 46%;
     }
 
 
