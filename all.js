@@ -116,3 +116,147 @@ hideSearch.addEventListener("click", function(){
     console.log(inputText)
   })
 
+//test go
+var testBtn = document.getElementById("testBtn");
+testBtn.addEventListener("click", function(){
+  var testh1 = document.getElementById("testh1");
+  var testp = document.getElementById("testp");
+  var testBtn = document.getElementById("testBtn");
+  testh1.remove()
+  testp.remove()
+  testBtn.remove()
+
+  var testText = document.getElementById("testText");
+  var li1 = document.createElement("LI");;
+  var testh1 = document.createTextNode("選擇在哪座城市學習?");
+  li1.className = "testh2";
+  li1.id = "testh2";
+  li1.appendChild(testh1)
+  testText.appendChild(li1)
+  var li2 = document.createElement("LI");
+  var testp = document.createTextNode("1/5");
+  li2.className = "testp2";
+  li2.id = "testp2";
+  li2.appendChild(testp)
+  testText.appendChild(li2)
+  var li3 = document.createElement("LI");
+  var btn1 = document.createElement('input');
+  btn1.type = "button";
+  btn1.className = "testBtn2";
+  btn1.value = "台北";
+  btn1.id = "testBtn1";
+  li3.appendChild(btn1)
+  testText.appendChild(li3)
+  var li4 = document.createElement("LI");
+  var btn2 = document.createElement('input');
+  btn2.type = "button";
+  btn2.className = "testBtn2";
+  btn2.value = "台中";
+  btn2.id = "testBtn2";
+  li4.appendChild(btn2)
+  testText.appendChild(li4)
+  var li5 = document.createElement("LI");
+  var btn3 = document.createElement('input');
+  btn3.type = "button";
+  btn3.className = "testBtn2";
+  btn3.value = "高雄";
+  btn3.id = "testBtn3";
+  li5.appendChild(btn3)
+  testText.appendChild(li5)
+  var li6 = document.createElement("LI");
+  var btn4 = document.createElement('input');
+  btn4.type = "button";
+  btn4.className = "testBtn2";
+  btn4.value = "各地";
+  btn4.id = "testBtn4";
+  li6.appendChild(btn4)
+  testText.appendChild(li6)
+  var li7 = document.createElement("LI");
+  var btn5 = document.createElement('input');
+  btn5.type = "button";
+  btn5.className = "testBtn2";
+  btn5.value = "不重要";
+  btn5.id = "testBtn5";
+  li7.appendChild(btn5)
+  testText.appendChild(li7)
+
+  for(var i = 1 ; i < 6 ; i++){
+    if(i == 1){
+      var testBtn1 = document.getElementById("testBtn1");
+      testBtn1.addEventListener("click", function(){
+        var testh2 = document.getElementById("testh2");
+        var testp2 = document.getElementById("testp2");
+        var testBtn1 = document.getElementById("testBtn1");
+        var testBtn2 = document.getElementById("testBtn2");
+        var testBtn3 = document.getElementById("testBtn3");
+        var testBtn4 = document.getElementById("testBtn4");
+        var testBtn5 = document.getElementById("testBtn5");
+        testh2.remove()
+        testp2.remove()
+        testBtn1.remove()
+        testBtn2.remove()
+        testBtn3.remove()
+        testBtn4.remove()
+        testBtn5.remove()
+
+        var testText = document.getElementById("testText");
+        var li1 = document.createElement("LI");;
+        var testh1 = document.createTextNode("每月能撥出多少費用學習？");
+        li1.className = "testh2";
+        li1.id = "testh2";
+        li1.appendChild(testh1)
+        testText.appendChild(li1)
+        var li2 = document.createElement("LI");
+        var testp = document.createTextNode("2/5");
+        li2.className = "testp2";
+        li2.id = "testp2";
+        li2.appendChild(testp)
+        testText.appendChild(li2)
+        var li3 = document.createElement("LI");
+        var btn1 = document.createElement('input');
+        btn1.type = "button";
+        btn1.className = "testBtn2";
+        btn1.value = "3000元以下";
+        btn1.id = "testBtn1";
+        li3.appendChild(btn1)
+        testText.appendChild(li3)
+        var li4 = document.createElement("LI");
+        var btn2 = document.createElement('input');
+        btn2.type = "button";
+        btn2.className = "testBtn2";
+        btn2.value = "6000元以內";
+        btn2.id = "testBtn2";
+        li4.appendChild(btn2)
+        testText.appendChild(li4)
+        var li5 = document.createElement("LI");
+        var btn3 = document.createElement('input');
+        btn3.type = "button";
+        btn3.className = "testBtn2";
+        btn3.value = "10000元以內";
+        btn3.id = "testBtn3";
+        li5.appendChild(btn3)
+        testText.appendChild(li5)
+        var li6 = document.createElement("LI");
+        var btn4 = document.createElement('input');
+        btn4.type = "button";
+        btn4.className = "testBtn2";
+        btn4.value = "10001元以上";
+        btn4.id = "testBtn4";
+        li6.appendChild(btn4)
+        testText.appendChild(li6)
+        var li7 = document.createElement("LI");
+        var btn5 = document.createElement('input');
+        btn5.type = "button";
+        btn5.className = "testBtn2";
+        btn5.value = "不重要";
+        btn5.id = "testBtn5";
+        li7.appendChild(btn5)
+        testText.appendChild(li7)
+      })
+    }else if(i == 2){
+      
+    }
+  }
+})
+
+
