@@ -1,7 +1,7 @@
 //JSON
-    const course_url = 'https://front-enter.firebaseio.com/list.json';
-        async function getISS() {
-            const response = await fetch(course_url);
+    const courseurl = 'https://front-enter.firebaseio.com/list.json';
+        async function get() {
+            const response = await fetch(courseurl);
             const dataAll = await response.json();
             
             // console.log(location.searchParams.toString()); 
@@ -26,7 +26,7 @@
             }
               courseUrl()  
         }
-        getISS()
+        get()
 
 //輪播器
   var slideLeft = document.getElementById("slideLeft");

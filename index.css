@@ -301,6 +301,7 @@ table {
     top: 400px;
     opacity: 0.7;
     transition: transform 3s ease;
+    z-index: 1;
 }
 .testgo:hover{
     cursor: pointer;
@@ -405,6 +406,19 @@ table {
     cursor: pointer;
     margin-top: 10px;
     margin-left: 100px;
+}
+.testBtn3{
+    color: rgb(26,216,211);
+    font-size: 18px;
+    background: white;
+    text-align: center;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    line-height: 40px;
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: 80px;
 }
 .testBtn2:hover{
     color: white;

@@ -1,10 +1,10 @@
   //JSON
   var dataAll = null
   var bg3 = document.getElementById('bg3')
-  const course_url = 'https://front-enter.firebaseio.com/list.json';
+  const courseUrl = 'https://front-enter.firebaseio.com/list.json';
 
-  async function getISS() {
-    const response = await fetch(course_url);
+  async function get() {
+    const response = await fetch(courseUrl);
     dataAll = await response.json();
     let inputText = (new URL(document.location)).searchParams.get('tid');
     var selectData = []
@@ -35,7 +35,7 @@
     }
   }
 
-  getISS()    
+  get()    
 
 //search
 var hideSearch = document.getElementById("hideSearch");
