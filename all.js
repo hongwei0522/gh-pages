@@ -310,24 +310,27 @@ async function getISS(e) {
           maxEl = el;
           maxCount = modeMap[el];
       }
+      
+      // if(maxEl = SuitableClass[i]){
+      //   btnUrl = btnUrl + SuitableClass[i].creatTime
+      // }
+    }
+  btnUrl = "http://localhost:8080/course.html?tid=";
+  for (var k = 0; k < selectdata.length; k++){
+    if(maxEl == selectdata[k].name){
+        btnUrl = btnUrl + selectdata[k].creatTime
+    }
   }
+  console.log(btnUrl)
   console.log(maxEl)
   console.log(maxCount)
-
   
-    for (var k = 0; k < selectdata.length; k++){
-      var courseHref = "?tid="
-      if(maxEl = selectdata[k].name){
-        btnUrl = courseHref + selectdata[k].creatTime
-        console.log(maxEl)
-      }
-    }
 
   
   selectTestGo.push(e.target.value)
   test.testText()
   test.testh2("你有多適合下列學校呢？")
-  test.testBtn3(maxEl)
+  test.testBtn3(maxEl,btnUrl)
   
 }
   
@@ -365,12 +368,12 @@ test.testBtn2 = function(name){
   Ul.appendChild(newElement)
   testBtn2.onclick = CleanButton;
 }
-test.testBtn3 = function(name){
+test.testBtn3 = function(name,classUrl){
   var Ul = document.getElementById("testText")
   let newElement = document.createElement('LI');
   let testBtn3 = document.createElement('input');
   let testBtnUrl = document.createElement('a');
-  testBtnUrl.href = "";
+  testBtnUrl.href = classUrl;
   testBtn3.type = "button2";
   testBtn3.className = "testBtn3";
   testBtn3.id = "testBtn3";
