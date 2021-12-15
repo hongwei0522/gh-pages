@@ -315,7 +315,7 @@ async function getISS(e) {
       //   btnUrl = btnUrl + SuitableClass[i].creatTime
       // }
     }
-  btnUrl = "http://localhost:8080/course.html?tid=";
+  btnUrl = "./course.html?tid=";
   for (var k = 0; k < selectdata.length; k++){
     if(maxEl == selectdata[k].name){
         btnUrl = btnUrl + selectdata[k].creatTime
