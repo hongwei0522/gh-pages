@@ -77,12 +77,14 @@ var testgo = document.getElementById('testgo');
 
 testgo.addEventListener("click", function(){
   if(document.getElementById("test").style.display == "none" && 
-      document.getElementById("hide4").style.display == "none")
+      document.getElementById("hide4").style.display == "none"){
+
     document.getElementById("test").style.display = "block" ,
     document.getElementById("hide4").style.display = "block";
-    else
+  }else{
     document.getElementById("test").style.display = "none" ,
     document.getElementById("hide4").style.display = "none";
+  }
 })
 
 var hide4 = document.getElementById('hide4');
