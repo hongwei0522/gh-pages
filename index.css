@@ -407,6 +407,10 @@ table {
     margin-top: 10px;
     margin-left: 100px;
 }
+.testBtn2:hover{
+    color: white;
+    background: rgb(138, 241, 238);
+}
 .testBtn3{
     color: rgb(26,216,211);
     font-size: 18px;
@@ -420,7 +424,7 @@ table {
     margin-top: 150px;
     margin-left: 80px;
 }
-.testBtn2:hover{
+.testBtn3:hover{
     color: white;
     background: rgb(138, 241, 238);
 }

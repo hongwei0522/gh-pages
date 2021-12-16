@@ -119,6 +119,7 @@ hideSearch.addEventListener("click", function(){
 let countClick = 0;
 var testgo = document.getElementById("testgo");
 var test = document.getElementById("test");
+
 testgo.addEventListener("click", createTest)
 function createTest(){
   if(countClick == 0){
@@ -310,16 +311,18 @@ async function getISS(e) {
           maxEl = el;
           maxCount = modeMap[el];
       }
-      
-      // if(maxEl = SuitableClass[i]){
-      //   btnUrl = btnUrl + SuitableClass[i].creatTime
-      // }
     }
+
   btnUrl = "./course.html?tid=";
   for (var k = 0; k < selectdata.length; k++){
     if(maxEl == selectdata[k].name){
         btnUrl = btnUrl + selectdata[k].creatTime
+        console.log(selectdata[k].name)
     }
+  }
+  if(maxEl == undefined){
+    btnUrl = "./explore.html";
+    maxEl = "請參考各種課程";
   }
   console.log(btnUrl)
   console.log(maxEl)

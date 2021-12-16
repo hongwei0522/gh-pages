@@ -3,19 +3,15 @@
     width: 750px;
     height: 550px;
     position: fixed;
-    background-position: center;
-    left: 25%;
-    top: 13.6%;
-    overflow: hidden;
+    background-position: center;   
+    /* overflow: hidden; */
     display: none;
-}
-.slide{
-    position: absolute;
-    width: 5250px;
-    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .slideimg{
-    float: left;
+    /* float: left; */
     width: 750px;
     height: 550px;
 }
@@ -26,7 +22,7 @@
     background-size: cover;
     position: fixed;
     cursor: pointer;
-    left: 21%;
+    left: -10%;
     top: 50%;
     z-index: 2;
     transform: rotate(180deg);
@@ -38,7 +34,7 @@
     background-size: cover;
     position: fixed;
     cursor: pointer;
-    left: 75%;
+    right: -10%;
     top: 50%;
     z-index: 2;
 }
@@ -226,12 +222,12 @@
         margin-top: 15px;
     }
     .slideLeft{
-        left: 0%;
+        left: -12%;
         top: 46%;
         
     }
     .slideRight{
-        right: 0%;
+        right: -12%;
         top: 46%;
     }
 }
