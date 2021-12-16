@@ -147,7 +147,7 @@ table {
 .hide2{
     display: none;
     width: 100%;
-    height: 350px;
+    height: 100%;
     margin-top: 400px;
     background-color: black;
     opacity: 0.7;
@@ -171,28 +171,28 @@ table {
 .inputText{
     width: 60%;
     display: block;
-    margin-left: 20%;
     line-height: 50px;
     font-size: 32px;
     border-radius: 20px;
     border: white;
-    margin-left: 300px;
     position: absolute;
+    top: 40%;
+    left: 20%;
 }
 .hideSearch{
     width: 30px;
-    margin-left: 78%;
-    margin-top: 10px;
     position: absolute;
+    top: 42%;
+    left: 77.5%;
 }
 .hideSearch:hover{
     cursor: pointer;
 }
 .microphone{
     width: 30px;
-    margin-left: 75%;
-    margin-top: 10px;
     position: absolute;
+    top: 42%;
+    left: 75%;
 }
 .microphone:hover{
     cursor: pointer;
@@ -319,6 +319,9 @@ table {
     display: none;
     z-index: 2;
     position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-30%, -40%);
 }
 .testText2{
     width: 350px;
@@ -326,8 +329,8 @@ table {
     position: fixed;
     background-image: url(https://frankyeah.github.io/Front-Enter/images/Staff-Selection-.jpg);
     border-radius: 5px;
-    margin-top: 170px;
-    margin-left: 38%;
+    /* margin-top: 170px;
+    margin-left: 38%; */
     opacity: 0.7;
 }
 .testText{
@@ -341,8 +344,8 @@ table {
     background-position-y: center;
     background-size: cover;
     border-radius: 5px;
-    margin-top: 170px;
-    margin-left: 38%;
+    /* margin-top: 170px;
+    margin-left: 38%; */
     opacity: 0.9;
 }
 .testh1{
@@ -500,18 +503,19 @@ table {
 
 @media (max-width: 479px){
     .inputText{
-        width: 80%;
-        margin-left: 45px;
+        width: 60%;
+        top: 40%;
+        left: 20%;
     }
     .hideSearch{
         width: 25px;
-        margin-left: 400px;
-        margin-top: 12px;
+        top: 42%;
+        left: 73%;
     }
     .microphone{
         width: 25px;
-        margin-left: 365px;
-        margin-top: 12px;
+        top: 42%;
+        left: 65%;
     }
     .header{
         display: flex;
@@ -540,12 +544,9 @@ table {
         margin-top: 120px;
         margin-left: 60px;
     }
-    .testText2{
-        margin-top: 120px;
-        margin-left: 40px;
-    }
-    .testText{
-        margin-top: 120px;
-        margin-left: 40px;
+    .test{
+        top: 20%;
+        left: 3%;
+        transform: translate(-20%, -3%);
     }
 }
