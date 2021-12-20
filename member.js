@@ -17,18 +17,22 @@ memberProfile.addEventListener("click", function(){
   document.getElementById("memberCollectDiv").style.display == "none" ){
     document.getElementById("memberInfo").style.display = "block";
     document.getElementById("memberCollectDiv").style.display = "none";
+    console.log(123)
   }else
     document.getElementById("memberInfo").style.display = "block";
     document.getElementById("memberCollectDiv").style.display = "none";
 })
+console.log(memberProfile)
 
 memberCollect.addEventListener("click", function(){
   if(document.getElementById("memberInfo").style.display == "block" &&
   document.getElementById("memberCollectDiv").style.display == "none" ){
     document.getElementById("memberInfo").style.display = "none";
     document.getElementById("memberCollectDiv").style.display = "block";
+    console.log(456)
   }else
     document.getElementById("memberInfo").style.display = "none";
     document.getElementById("memberCollectDiv").style.display = "block";
 })
+console.log(memberCollect)
 
