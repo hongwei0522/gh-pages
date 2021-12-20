@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="member.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="login.js"></script>
 </head>
 <body>
     <div class="loading1" id="loading1"></div>
@@ -18,7 +20,8 @@
         <ul class="title">
             <li><a class="font" href="explore.html">探索</a></li>
             <li><a class="font" href="skillTree.html">技能樹</a></li>
-            <li><a class="font" id="log" href="#">登入</a></li>
+            <li id="titleLogin" style="display: none;" ><a class="font" id="log" href="#">登入</a></li>
+            <li id="memberText" style="display: block"><a class="font" href="./member.html">會員</a></li>
             <li><a class="search"><img class="search" id="search" src="https://frankyeah.github.io/Front-Enter/images/FE_search_green.png" alt="搜尋"></a></li>
         </ul>
     </div>
@@ -32,10 +35,10 @@
     <div class="login" id="login"  style="display: none;">
         <ul class="loginTitle">
             <li><img class="loginLogo" src="https://frankyeah.github.io/Front-Enter/images/FE_logo-2.png" alt="login logo"></li>
-            <li><input type="text" class="inputMail" placeholder="Email"><br><input type="text" class="inputCode" placeholder="******"></li>
+            <li><input type="text" class="inputMail" id="inputMail" placeholder="Email"><br><input type="text" class="inputCode" id="inputCode" placeholder="******"></li>
             <li><p class="forgetCode">忘記密碼?</p></li>
-            <li><input type="button" class="registerbtn" value="註冊"><span><input type="button" class="loginbtn" value="登入"></span></li>
-            <li><p class="loginGmail">Log In With Gmail</p></li>
+            <li><input type="button" class="registerbtn" id="registerbtn" value="註冊"><span><input type="button" id="loginbtn" class="loginbtn" value="登入"></span></li>
+            <li><input type="button" class="loginGmail" id="loginGmail" value="In With Gmail" id="loginGmail"></li>
         </ul>
     </div>
     <div class="hide3" id="hide3" style="display: none;"></div>
@@ -54,7 +57,7 @@
             <li><input type="button" class="member-button" id="memberCollect" value="收藏"></li>
             <li><input type="button" class="member-button" id="memberSignout" value="登出"></li>
         </ul>
-        <ul class="member-info" >
+        <ul class="member-info" id="memberInfo" style="display: block;" >
             <li><img class="member-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiL6QZVHONxxMTgWynj6IFUn1J6kwFpKClLg&usqp=CAU" alt=""></li>
             <li class="member-flex"><p class="member-personal">姓名</p><input type="text" name="" id=""></li>
             <li class="member-flex"><p class="member-personal">手機</p><input type="text" name="" id=""></li>
@@ -65,7 +68,7 @@
                 <input type="button" class="member-button" value="取消">
             </li>
         </ul>
-        <ul class="member-collect" style="display: none;">
+        <ul class="member-collect" id="memberCollectDiv" style="display: none;">
             <li><img class="member-classphoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiL6QZVHONxxMTgWynj6IFUn1J6kwFpKClLg&usqp=CAU" alt=""></li>
             <li><p class="member-classname">姓名</p></li>
             <li><input type="button" class="member-delete" value=""></li>
@@ -84,7 +87,7 @@
             </li>
         </ul>
     </div>
-    <script src="all.js"></script>
     <script src="member.js"></script>
+    <script src="all.js"></script>
 </body>
 </html>

@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="explore.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="login.js"></script>
 </head>
 <body>
     <div class="loading1" id="loading1"></div>
@@ -18,7 +20,8 @@
         <ul class="title">
             <li><a class="font" href="explore.html">探索</a></li>
             <li><a class="font" href="skillTree.html">技能樹</a></li>
-            <li><a class="font" id="log" href="#">登入</a></li>
+            <li id="titleLogin" style="display: block;" ><a class="font" id="log" href="#">登入</a></li>
+            <li id="memberText" style="display: none"><a class="font" href="./member.html">會員</a></li>
             <li><a class="search"><img class="search" id="search" src="https://frankyeah.github.io/Front-Enter/images/FE_search_green.png" alt="搜尋"></a></li>
         </ul>
     </div>
@@ -34,8 +37,8 @@
             <li><img class="loginLogo" src="https://frankyeah.github.io/Front-Enter/images/FE_logo-2.png" alt="login logo"></li>
             <li><input type="text" class="inputMail" placeholder="Email"><br><input type="text" class="inputCode" placeholder="******"></li>
             <li><p class="forgetCode">忘記密碼?</p></li>
-            <li><input type="button" class="registerbtn" value="註冊"><span><input type="button" class="loginbtn" value="登入"></span></li>
-            <li><p class="loginGmail">Log In With Gmail</p></li>
+            <li><input type="button" class="registerbtn" id="registerbtn" value="註冊"><span><input type="button" id="loginbtn" class="loginbtn" value="登入"></span></li>
+            <li><input type="button" class="loginGmail" id="loginGmail" value="In With Gmail" id="loginGmail"></li>
         </ul>
     </div>
     <div class="hide3" id="hide3" style="display: none;"></div>

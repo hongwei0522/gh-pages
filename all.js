@@ -388,3 +388,71 @@ test.testBtn3 = function(name,classUrl){
   Ul.appendChild(newElement)
   testBtn3.onclick = CleanButton;
 }
+
+// Email login
+var loginGmail = document.getElementById("loginGmail");
+var inputMail = document.getElementById("inputMail");
+var inputCode = document.getElementById("inputCode");
+var registerbtn = document.getElementById("registerbtn");
+var loginbtn = document.getElementById("loginbtn");
+
+
+//註冊
+registerbtn.addEventListener("click", function(e){
+  e.preventDefault();
+  firebase.auth().createUserWithEmailAndPassword(inputMail.value, inputCode.value)
+  .then(() => {
+      console.log("註冊成功");
+  })
+})
+
+//登入
+loginbtn.addEventListener("click", function(e){
+  //preventDefaul 防止跳頁
+  e.preventDefault();
+  firebase.auth().signInWithEmailAndPassword(inputMail.value, inputCode.value)
+  .then(() => {
+    var user = firebase.auth().currentUser;
+    var log = document.getElementById('log');
+    if (user) {
+      console.log(user);
+      console.log(firebase.auth())
+      log.innerHTML = '<a class="font" href="./member.html">會員</a>';
+      document.getElementById("login").style.display = "none" ,
+      document.getElementById("hide3").style.display = "none";
+    }
+  })
+  .catch((error) => {
+      window.alert(error.message);
+  })
+})
+
+
+//登入判斷
+var titleLogin = document.getElementById("titleLogin");
+var memberText = document.getElementById("memberText");
+firebase.auth().onAuthStateChanged(function(user) {
+  console.log(user)
+  if (user) {
+    document.getElementById("titleLogin").style.display = "none";
+    document.getElementById("memberText").style.display = "block";
+    document.getElementById("login").style.display = "none" ,
+    document.getElementById("hide3").style.display = "none";
+    // User is signed in.
+  } else {
+    document.getElementById("titleLogin").style.display = "block";
+    document.getElementById("memberText").style.display = "none";
+    // No user is signed in.
+  }
+});
+
+//google登入
+var provider = new firebase.auth.GoogleAuthProvider();
+var loginGmail = document.getElementById('loginGmail');
+
+loginGmail.onclick = function() {
+  firebase.auth().signInWithRedirect(provider).then(function(result) {    
+    var token = result.credential.accessToken;
+    var user = result.user;
+  });
+ }
