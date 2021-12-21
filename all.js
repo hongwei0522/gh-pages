@@ -432,12 +432,24 @@ loginbtn.addEventListener("click", function(e){
 var titleLogin = document.getElementById("titleLogin");
 var memberText = document.getElementById("memberText");
 firebase.auth().onAuthStateChanged(function(user) {
-  console.log(user)
   if (user) {
+    var photoURL = user.photoURL;
+    console.log(user)
+    var photoHtml = `<a href="./member.html" >
+    <div id="photobg" class="font-image"></div>
+    </a>`;
+    // var photoHtml = `<a class="font" href="./member.html" style="backgroundImage: url(${photoURL}) ></a>`;
     document.getElementById("titleLogin").style.display = "none";
     document.getElementById("memberText").style.display = "block";
     document.getElementById("login").style.display = "none" ,
     document.getElementById("hide3").style.display = "none";
+    if(user.photoURL !== null ){
+      document.getElementById("memberText").innerHTML = photoHtml;
+      document.getElementById("photobg").style.backgroundImage = `url(${photoURL})`;
+      if(window.location.href == "http://localhost:8080/member.html"){
+        document.getElementById("memberPhoto").src = `${photoURL}`;
+      }
+    }
     // User is signed in.
   } else {
     document.getElementById("titleLogin").style.display = "block";
@@ -456,3 +468,4 @@ loginGmail.onclick = function() {
     var user = result.user;
   });
  }
+ 

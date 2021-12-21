@@ -22,7 +22,6 @@ memberProfile.addEventListener("click", function(){
     document.getElementById("memberInfo").style.display = "block";
     document.getElementById("memberCollectDiv").style.display = "none";
 })
-console.log(memberProfile)
 
 memberCollect.addEventListener("click", function(){
   if(document.getElementById("memberInfo").style.display == "block" &&
@@ -34,5 +33,33 @@ memberCollect.addEventListener("click", function(){
     document.getElementById("memberInfo").style.display = "none";
     document.getElementById("memberCollectDiv").style.display = "block";
 })
-console.log(memberCollect)
 
+
+//member 修改資料與確認
+var memberRevise = document.getElementById("memberRevise");
+var memberConfirm = document.getElementById("memberConfirm");
+var memberCancel = document.getElementById("memberCancel");
+//style.display 用function代入
+memberRevise.addEventListener("click", function(){
+  if(document.getElementById("memberRevise").style.display == "block" &&
+  document.getElementById("memberCheck").style.display == "none"){
+    document.getElementById("memberRevise").style.display = "none";
+    document.getElementById("memberCheck").style.display = "block";
+  }
+})
+
+memberConfirm.addEventListener("click", function(){
+  if(document.getElementById("memberRevise").style.display == "none" &&
+  document.getElementById("memberCheck").style.display == "block"){
+    document.getElementById("memberRevise").style.display = "block";
+    document.getElementById("memberCheck").style.display = "none";
+  }
+})
+
+memberCancel.addEventListener("click", function(){
+  if(document.getElementById("memberRevise").style.display == "none" &&
+  document.getElementById("memberCheck").style.display == "block"){
+    document.getElementById("memberRevise").style.display = "block";
+    document.getElementById("memberCheck").style.display = "none";
+  }
+})

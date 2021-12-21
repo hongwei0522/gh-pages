@@ -58,14 +58,14 @@
             <input type="button" class="member-button" id="memberSignout" value="登出">
         </div>
         <ul class="member-info" id="memberInfo" style="display: block;" >
-            <li><img class="member-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiL6QZVHONxxMTgWynj6IFUn1J6kwFpKClLg&usqp=CAU" alt=""></li>
+            <li><img class="member-photo" id="memberPhoto" src="https://frankyeah.github.io/Front-Enter/images/profile-user-img.svg" alt=""></li>
             <li class="member-flex"><p class="member-personal">姓名</p><input type="text" name="" id=""></li>
             <li class="member-flex"><p class="member-personal">手機</p><input type="text" name="" id=""></li>
             <li class="member-flex"><p class="member-personal">信箱</p><input type="text" name="" id=""></li>
-            <li style="display: none;"><input type="button" class="member-button" value="修改資料"></li>
-            <li class="member-flex-button">
-                <input type="button" class="member-button" value="確認">
-                <input type="button" class="member-button" value="取消">
+            <li class="member-flex-revise" id="memberRevise" style="display: block;"><input type="button" class="member-button" value="修改資料"></li>
+            <li class="member-flex-button" id="memberCheck" style="display: none;">
+                <input type="button" class="member-button" id="memberConfirm" value="確認">
+                <input type="button" class="member-button" id="memberCancel" value="取消">
             </li>
         </ul>
         <ul class="member-collect" id="memberCollectDiv" style="display: none;">

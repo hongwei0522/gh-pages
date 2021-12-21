@@ -124,6 +124,7 @@ table {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 .title a:hover{
     color: rgb(26,216,211);
@@ -133,6 +134,12 @@ table {
     color: grey;
     font-size: 16px;
     font-family: "Noto Sans TC";
+}
+.font-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
 }
 
 .hide{
@@ -153,6 +160,10 @@ table {
     opacity: 0.7;
     position: fixed;
     z-index: 1;
+}
+.memberText{
+    display: flex;
+    align-items: center;
 }
 .search{
     width: 18px;
