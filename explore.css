@@ -69,11 +69,27 @@
     border: 1px solid rgb(26, 216, 211);
     margin-right: 20px;
     margin-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 .bg3Blocka{
     text-decoration: none;
     color: black;
+}
+.bg3BlockCollect{
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px 0px 90%;
+    cursor: pointer;
+}
+.bg3BlockCollectBlack{
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px 0px 90%;
+    cursor: pointer;
 }
 .location{
     text-align: center;

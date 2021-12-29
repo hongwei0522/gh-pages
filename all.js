@@ -438,7 +438,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     var photoHtml = `<a href="./member.html" >
     <div id="photobg" class="font-image"></div>
     </a>`;
-    // var photoHtml = `<a class="font" href="./member.html" style="backgroundImage: url(${photoURL}) ></a>`;
+    var bg3BlockURL =	"https://frankyeah.github.io/Front-Enter/images/star-border.svg";
+    var bg3BlockURL2 = "https://frankyeah.github.io/Front-Enter/images/star-background.svg"
     document.getElementById("titleLogin").style.display = "none";
     document.getElementById("memberText").style.display = "block";
     document.getElementById("login").style.display = "none" ,
@@ -448,6 +449,57 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("photobg").style.backgroundImage = `url(${photoURL})`;
       if(window.location.href == "http://localhost:8080/member.html"){
         document.getElementById("memberPhoto").src = `${photoURL}`;
+      }
+      if(window.location.href == "http://localhost:8080/explore.html"){
+        for(var j =0; j < 9; j ++){
+          let bg3Block = document.getElementById("bg3Block" + [j]);
+          let bg3BlockCollect = document.createElement("DIV");
+          bg3BlockCollect.className = "bg3BlockCollect";
+          bg3BlockCollect.id = "bg3BlockCollect" + [j];
+          bg3BlockCollect.onclick = whiteCollect;
+          bg3Block.appendChild(bg3BlockCollect);
+          document.getElementById("bg3BlockCollect" + [j]).style.backgroundImage = `url(${bg3BlockURL})`;
+          
+          var srcClassAll = [];
+          let srcClass = document.getElementById("locationimg" + [j]).src;
+          var nameClassAll = [];
+          let nameClass = document.getElementById("locationh1" + [j]).innerHTML;
+          let number = [j];
+          let collectClick = true;
+
+          //判斷星星顏色
+          let checkName = JSON.parse(localStorage.getItem('name'));
+          for(var k = 0; k < nameClass.length; k++){
+            if(checkName[k] == nameClass){
+              bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
+              console.log(123)
+            }
+          } 
+          //按星星取值
+          function whiteCollect(){
+            if(collectClick){
+              bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
+              srcClassAll.push(srcClass);
+              nameClassAll.push(nameClass);
+              console.log(srcClassAll)
+              console.log(nameClassAll)
+              localStorage.setItem('src',JSON.stringify(srcClassAll));
+              localStorage.setItem('name',JSON.stringify(nameClassAll));
+              console.log(collectClick);
+            }
+            if(!collectClick){
+              bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL})`;
+              srcClassAll.splice(number,1);
+              nameClassAll.splice(number,1);
+              localStorage.setItem('src',JSON.stringify(srcClassAll));
+              localStorage.setItem('name',JSON.stringify(nameClassAll));
+              console.log(srcClassAll)
+              console.log(nameClassAll)
+              console.log(collectClick)
+            }
+            collectClick = !collectClick;
+          }
+        }
       }
     }
     // User is signed in.
@@ -469,3 +521,13 @@ loginGmail.onclick = function() {
   });
  }
  
+ //忘記密碼
+const forgetCode = document.getElementById('forgetCode');
+forgetCode.addEventListener("click", function(){
+  firebase.auth().sendPasswordResetEmail(inputMail.value).then(function() {
+    window.alert('已發送信件至信箱，請按照信件說明重設密碼');
+    window.location.reload(); // 送信後，強制頁面重整一次
+  }).catch(function(error) {
+    alert(error.message)
+  });
+})

@@ -32,7 +32,6 @@
     display: flex;
     justify-content: center;
     padding: 60px 40px;
-    height: 400px;
     text-align: center;
 }
 .member-selection{
@@ -88,17 +87,26 @@
     text-align: center;
     letter-spacing: 3px;
 }
-.member-collect{
+.member-allcollect{
     width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.member-collect{
+    width: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-left: 20px;
 }
 .member-classphoto{
     width: 120px;
     height: 120px;
+    margin-bottom: 20px;
 }
 .member-classname{
     text-align: center;
@@ -106,6 +114,7 @@
     line-height: 20px;
     color: rgb(26,216,211);
     margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 .member-delete{
     background: URL(https://frankyeah.github.io/Front-Enter/images/rubbish-bin.svg);
@@ -115,12 +124,14 @@
     margin: 0 auto;
     cursor: pointer;
     border: none;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 479px){
     .member-content{
         flex-direction: column-reverse;
         height: auto;
+        align-items: center;
     }
     .member-info{
         width: 300px;
@@ -129,7 +140,7 @@
         transform: translateX(0%);
     }
     .member-collect{
-        width: 300px;
+        width: 100%;
         border-bottom: 1px solid rgba(230, 230, 230, 0.7);
     }
     .member-selection{

@@ -61,6 +61,7 @@ hideSearch.addEventListener("click", function(){
           var explorehtml = explorehref + dataSelect[j].creatTime;
           a.href = explorehtml;
           ul.className = "bg3Block";
+          ul.id = "bg3Block" + [j];
           a.className = "bg3Blocka";
           var text = "node";
           var node = "";
@@ -82,12 +83,14 @@ hideSearch.addEventListener("click", function(){
               var squareUrl = document.createElement("img");
               squareUrl.src = dataSelect[j].squareUrl;
               squareUrl.className = "locationimg";
+              squareUrl.id = "locationimg" + [j];
               node.className = "locationimgover";
               node.appendChild(squareUrl);
             }
             else if (i == 2){
               var name = document.createTextNode(dataSelect[j].name);
               node.className = "locationh1";
+              node.id = "locationh1" + [j];
               node.appendChild(name);
             }
             else if (i == 3){
