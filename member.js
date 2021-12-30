@@ -118,3 +118,59 @@ function newDiv(i){
   memberDelete.id = "memberDelete"+ [i];
   memberDiv.appendChild(memberDelete);
 }
+
+//修改資料
+let memberName = document.getElementById("memberName");
+let memberPhone = document.getElementById("memberPhone");
+let memberEmail = document.getElementById("memberEmail");
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    //firebase資料代入localStorage
+    if(localStorage.getItem('memberData') == null){
+      localStorage.setItem('memberData',JSON.stringify({
+        name: user.displayName,
+        phone: user.phoneNumber,
+        mail: user.email,
+      }));
+    }
+    
+    //將localStorage代入個人資料
+    var tempMemberData = JSON.parse(localStorage.getItem(`memberData`))
+    memberName.value =  tempMemberData.name;
+    memberPhone.value =  tempMemberData.phone;
+    memberEmail.value =  tempMemberData.mail;
+    var memberReviseButton = document.getElementById("memberReviseButton");
+    //修改資料 確認 取消
+    memberReviseButton.onclick = modifyInformation;
+    memberConfirm.onclick = confirmInformation;
+    memberCancel.onclick = cancelInformation;
+    //修改
+    function modifyInformation(){
+      memberName.disabled = false;
+      memberPhone.disabled = false;
+      memberEmail.disabled = false;
+    }
+    //確認
+    function confirmInformation(){
+      memberName.disabled = true;
+      memberPhone.disabled = true;
+      memberEmail.disabled = true;
+      localStorage.setItem('memberData',JSON.stringify({
+        name: memberName.value,
+        phone: memberPhone.value,
+        mail: memberEmail.value,
+      }));
+      console.log(memberPhone)
+    }
+    //取消
+    function cancelInformation(){
+      memberName.disabled = true;
+      memberPhone.disabled = true;
+      memberEmail.disabled = true;
+      memberName.value =  tempMemberData.name;
+      memberPhone.value =  tempMemberData.phone;
+      memberEmail.value =  tempMemberData.mail;
+    }
+  }
+})
+
