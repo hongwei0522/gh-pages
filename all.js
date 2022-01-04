@@ -459,6 +459,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     let bg3BlockCollect = document.createElement("DIV");
     bg3BlockCollect.className = "bg3BlockCollect";
     bg3BlockCollect.id = "bg3BlockCollect" + [j];
+    console.log(bg3Block)
     bg3Block.appendChild(bg3BlockCollect);
     document.getElementById("bg3BlockCollect" + [j]).style.backgroundImage = `url(${bg3BlockURL})`;
     document.getElementById("bg3BlockCollect" + [j]).style.display = "block";
