@@ -430,86 +430,139 @@ loginbtn.addEventListener("click", function(e){
 
 
 //登入判斷
-//順序 收藏有問題
 var titleLogin = document.getElementById("titleLogin");
 var memberText = document.getElementById("memberText");
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log(user)
     var photoHtml = `<a href="./member.html" >
     <div id="photobg" class="font-image"></div>
     </a>`;
-    var bg3BlockURL =	"https://frankyeah.github.io/Front-Enter/images/star-border.svg";
-    var bg3BlockURL2 = "https://frankyeah.github.io/Front-Enter/images/star-background.svg"
     document.getElementById("titleLogin").style.display = "none";
     document.getElementById("memberText").style.display = "block";
     document.getElementById("login").style.display = "none" ,
     document.getElementById("hide3").style.display = "none";
 
+  //換大頭
   if(user.photoURL !== null ){
     let photoURL = user.photoURL;
     document.getElementById("memberText").innerHTML = photoHtml;
     document.getElementById("photobg").style.backgroundImage = `url(${photoURL})`;
     document.getElementById("memberPhoto").src = `${photoURL}`;
   }
-  //換大頭
-  
+
+  //新增星星
+  var bg3BlockURL =	"https://frankyeah.github.io/Front-Enter/images/star-border.svg";
+  var bg3BlockURL2 = "https://frankyeah.github.io/Front-Enter/images/star-background.svg"
   for(var j =0; j < 9; j ++){
     let bg3Block = document.getElementById("bg3Block" + [j]);
+    //白星星
     let bg3BlockCollect = document.createElement("DIV");
     bg3BlockCollect.className = "bg3BlockCollect";
     bg3BlockCollect.id = "bg3BlockCollect" + [j];
-    bg3BlockCollect.onclick = whiteCollect;
     bg3Block.appendChild(bg3BlockCollect);
     document.getElementById("bg3BlockCollect" + [j]).style.backgroundImage = `url(${bg3BlockURL})`;
-    console.log(localStorage.getItem('name'))
-    if(localStorage.getItem('name') !== []){
-      srcClassAll = JSON.parse(localStorage.getItem('src'));
-      nameClassAll = JSON.parse(localStorage.getItem('name'));
-    }else{
-      var srcClassAll = [];
-      var nameClassAll = [];
-    }
+    document.getElementById("bg3BlockCollect" + [j]).style.display = "block";
+    bg3BlockCollect.onclick = whiteCollect;
+    //黑星星
+    let bg3BlackBlockCollect = document.createElement("DIV");
+    bg3BlackBlockCollect.className = "bg3BlackBlockCollect";
+    bg3BlackBlockCollect.id = "bg3BlackBlockCollect" + [j];
+    bg3Block.appendChild(bg3BlackBlockCollect);
+    document.getElementById("bg3BlackBlockCollect" + [j]).style.backgroundImage = `url(${bg3BlockURL2})`;
+    document.getElementById("bg3BlackBlockCollect" + [j]).style.display = "none";
+    bg3BlackBlockCollect.onclick = BlackCollect;
+
+    //判斷localStorage
     let srcClass = document.getElementById("locationimg" + [j]).src;
     let nameClass = document.getElementById("locationh1" + [j]).innerHTML;
-    let number = [j];
-    //判斷星星顏色
-    let checkName = JSON.parse(localStorage.getItem('name'));
-    if(checkName !== null){
-      for(var k = 0; k < checkName.length; k++){
-        if(checkName[k] == nameClass){
-          bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
-        }
-      }
+
+    if(localStorage.getItem('name') == null){
+      var srcClassAll = [];
+      var nameClassAll = [];
+    }else{
+      srcClassAll = JSON.parse(localStorage.getItem('src'));
+      nameClassAll = JSON.parse(localStorage.getItem('name'));
     }
     
-    //按星星取值
-    //判斷星星黑還白
-    //如果黑不執行collectClick
+    //判斷星星顏色
+      for(var k = 0; k < 9; k++){
+        if(nameClass == nameClassAll[k]){
+          bg3BlockCollect.style.display = "none";
+          bg3BlackBlockCollect.style.display = "block";
+        }
+      }
     
-    // console.log(bg3BlockCollect)
-    // if(bg3BlockCollect){
-      let collectClick = true;
-    // }
+    //white function
     function whiteCollect(){
-      if(collectClick){
-        bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
-        console.log(nameClass)
-        console.log(number)
-        srcClassAll.push(srcClass);
-        nameClassAll.push(nameClass);
-        localStorage.setItem('src',JSON.stringify(srcClassAll));
-        localStorage.setItem('name',JSON.stringify(nameClassAll));
+      bg3BlockCollect.style.display = "none";
+      bg3BlackBlockCollect.style.display = "block";
+      
+      srcClassAll.push(srcClass);
+      nameClassAll.push(nameClass);
+      localStorage.setItem('src',JSON.stringify(srcClassAll));
+      localStorage.setItem('name',JSON.stringify(nameClassAll));
+    }
+    //black function
+    function BlackCollect(){
+      bg3BlockCollect.style.display = "block";
+      bg3BlackBlockCollect.style.display = "none";
+
+      for(var k = 0; k < 9; k++){
+        if(nameClass == JSON.parse(localStorage.getItem('name'))[k]){
+          srcClassAll.splice(k,1);
+          nameClassAll.splice(k,1);
+          localStorage.setItem('src',JSON.stringify(srcClassAll));
+          localStorage.setItem('name',JSON.stringify(nameClassAll));
+        }
       }
-      if(!collectClick){
-        bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL})`;
-        srcClassAll.splice(number,1);
-        nameClassAll.splice(number,1);
-        localStorage.setItem('src',JSON.stringify(srcClassAll));
-        localStorage.setItem('name',JSON.stringify(nameClassAll));
-      }
-      collectClick = !collectClick; 
-    }   
+      
+    }
+
+
+    //判斷星星顏色
+    // let checkName = JSON.parse(localStorage.getItem('name'));
+    // if(checkName !== null){
+    //   for(var k = 0; k < checkName.length; k++){
+    //     if(checkName[k] == nameClass){
+    //       bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
+    //     }
+    //   }
+    // }
+    // let collectClick = true;
+
+    // console.log(bg3BlockCollect.style.backgroundImage)
+    // if(bg3BlockCollect.style.backgroundImage == `url(${bg3BlockURL2})`){
+    //   collectClick = false;
+    // }
+
+
+    // function whiteCollect(){
+    //   console.log(collectClick)
+    //   if(collectClick){
+    //     bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL2})`;
+    //   }else if(!collectClick){
+    //     bg3BlockCollect.style.backgroundImage = `url(${bg3BlockURL})`;
+    //   }
+    //   collectClick = !collectClick;
+
+    //   if(nameClass == 123){
+    //     srcClassAll.push(srcClass);
+    //     nameClassAll.push(nameClass);
+    //     localStorage.setItem('src',JSON.stringify(srcClassAll));
+    //     localStorage.setItem('name',JSON.stringify(nameClassAll));
+    //   }else {
+    //     srcClassAll.splice(checkName,1);
+    //     nameClassAll.splice(checkName,1);
+    //     localStorage.setItem('src',JSON.stringify(srcClassAll));
+    //     localStorage.setItem('name',JSON.stringify(nameClassAll));
+    //   }
+      
+    //   console.log(bg3BlockCollect)
+    //   console.log(nameClass)
+    // }
+    // function BlackCollect(){
+
+    // }
   }  
   
     // User is signed in.
