@@ -27,7 +27,7 @@
         }
       }
     }
-    console.log(selectData)
+    
     if(inputText) {
       createSelectElement(selectData, selectData.length)
     } else {
@@ -119,7 +119,7 @@ hideSearch.addEventListener("click", function(){
     bg3BlockCollect.id = "bg3BlockCollect" + [j];
     ul.appendChild(bg3BlockCollect);
     document.getElementById("bg3BlockCollect" + [j]).style.backgroundImage = `url(${bg3BlockURL})`;
-    document.getElementById("bg3BlockCollect" + [j]).style.display = "block";
+    document.getElementById("bg3BlockCollect" + [j]).style.display = "none";
     bg3BlockCollect.onclick = whiteCollect;
   //   //黑星星
     let bg3BlackBlockCollect = document.createElement("DIV");
@@ -131,43 +131,51 @@ hideSearch.addEventListener("click", function(){
     bg3BlackBlockCollect.onclick = BlackCollect;
 
   //   //判斷localStorage
-  //   console.log(squareUrl)
     let srcClass = document.getElementById("locationimg" + [j]).src;
     let nameClass = document.getElementById("locationh1" + [j]).innerHTML;
-
+    console.log('execute')
     if(localStorage.getItem('name') == null){
-      var srcClassAll = [];
-      var nameClassAll = [];
+      
     }else{
       srcClassAll = JSON.parse(localStorage.getItem('src'));
       nameClassAll = JSON.parse(localStorage.getItem('name'));
     }
     
-  //   //判斷星星顏色
-      for(var k = 0; k < 9; k++){
-        if(nameClass == nameClassAll[k]){
-          bg3BlockCollect.style.display = "none";
-          bg3BlackBlockCollect.style.display = "block";
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        //確認星星
+        document.getElementById("bg3BlockCollect" + [j]).style.display = "block";
+        for(var k = 0; k < 9; k++){
+          //判斷星星顏色
+          if(nameClass == nameClassAll[k]){
+            document.getElementById("bg3BlockCollect" + [j]).style.display = "none";
+            document.getElementById("bg3BlackBlockCollect" + [j]).style.display = "block";
+          }
         }
+          
       }
+    })
     
-  //   //white function
+    
+    //white function
     function whiteCollect(){
       bg3BlockCollect.style.display = "none";
       bg3BlackBlockCollect.style.display = "block";
-      
+
       srcClassAll.push(srcClass);
       nameClassAll.push(nameClass);
+
       localStorage.setItem('src',JSON.stringify(srcClassAll));
       localStorage.setItem('name',JSON.stringify(nameClassAll));
     }
-  //   //black function
+    //black function
     function BlackCollect(){
       bg3BlockCollect.style.display = "block";
       bg3BlackBlockCollect.style.display = "none";
 
       for(var k = 0; k < 9; k++){
         if(nameClass == JSON.parse(localStorage.getItem('name'))[k]){
+          console.log('delete me')
           srcClassAll.splice(k,1);
           nameClassAll.splice(k,1);
           localStorage.setItem('src',JSON.stringify(srcClassAll));
@@ -176,11 +184,10 @@ hideSearch.addEventListener("click", function(){
       } 
     }
   // }  
-
-
   } 
 
-  
+  var srcClassAll = [];
+  var nameClassAll = [];
 
   //全部 小班制 放養制 一對一
   var allclass = document.getElementById('allclass');
