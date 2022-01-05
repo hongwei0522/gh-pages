@@ -32,37 +32,55 @@
   var slideLeft = document.getElementById("slideLeft");
   var slideRight = document.getElementById("slideRight");
   var slideimg = document.getElementById("slideimg");
-  var currentslideimg = 1;
+  var currentslideimg = 0;
 
   slideLeft.addEventListener("click", function(){
-    currentslideimg--;
       if(currentslideimg == 0){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
         currentslideimg = 5;
+        currentslideimg--
+        console.log(currentslideimg)
       }else if(currentslideimg == 4){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
+        currentslideimg--
+        console.log(currentslideimg)
       }else if(currentslideimg == 3){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
+        currentslideimg--
+        console.log(currentslideimg)
       }else if(currentslideimg == 2){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
+        currentslideimg--
+        console.log(currentslideimg)
       }else if(currentslideimg == 1){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
+        currentslideimg--
+        console.log(currentslideimg)
       }
   })
 
   slideRight.addEventListener("click", function(){
-    currentslideimg++;
       if(currentslideimg == 0){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
+        currentslideimg++
+        console.log(currentslideimg)
       }else if(currentslideimg == 4){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
         currentslideimg = -1;
+        currentslideimg++
+        console.log(currentslideimg)
       }else if(currentslideimg == 3){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
+        currentslideimg++
+        console.log(currentslideimg)
       }else if(currentslideimg == 2){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
+        currentslideimg++
+        console.log(currentslideimg)
       }else if(currentslideimg == 1){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
+        currentslideimg++
+        console.log(currentslideimg)
       }
   })
 

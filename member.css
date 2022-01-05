@@ -35,7 +35,7 @@
     text-align: center;
 }
 .member-selection{
-    width: 30%;
+    width: 20%;
     text-align: right;
     margin-top: 100px;
     display: flex;
@@ -57,12 +57,10 @@
     margin-left: 30px;
 }
 .member-info{
-    width: 60%;
+    width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-10%);
+    text-align: center;
 }
 .member-photo{
     width: 120px;
@@ -88,11 +86,10 @@
     letter-spacing: 3px;
 }
 .member-allcollect{
-    width: 60%;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
-    
-    
+    justify-content: center;
 }
 .member-collect{
     width: 120px;
@@ -137,7 +134,6 @@
         width: 300px;
         height: 400px;
         border-bottom: 1px solid rgba(230, 230, 230, 0.7);
-        transform: translateX(0%);
     }
     .member-collect{
         width: 100%;
