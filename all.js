@@ -441,21 +441,21 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("memberText").style.display = "block";
     document.getElementById("login").style.display = "none" ,
     document.getElementById("hide3").style.display = "none";
-  
-  //換大頭
-    if(user.photoURL !== null ){
-      let photoURL = user.photoURL;
-      document.getElementById("memberText").innerHTML = photoHtml;
-      document.getElementById("photobg").style.backgroundImage = `url(${photoURL})`;
-      document.getElementById("memberPhoto").src = `${photoURL}`;
-    }
-  
+
+    //換大頭
+  if(user.photoURL !== null ){
+    let photoURL = user.photoURL;
+    document.getElementById("memberText").innerHTML = photoHtml;
+    document.getElementById("photobg").style.backgroundImage = `url(${photoURL})`;
+    document.getElementById("memberPhoto").src = `${photoURL}`;
+  }
     // User is signed in.
   } else {
     document.getElementById("titleLogin").style.display = "block";
     document.getElementById("memberText").style.display = "none";
     // No user is signed in.
   }
+  
 });
 
 //google登入

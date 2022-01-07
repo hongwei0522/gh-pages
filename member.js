@@ -72,10 +72,12 @@ createI()
 
 //設定i代入
 function createI(){
-  for(var i = 0; i < collectSrc.length; i++){
-    if(collectSrc[i] !== undefined){
-      newDiv(i);
-      createNewCollect(i)
+  if(localStorage.getItem('name') !== null){
+    for(var i = 0; i < collectSrc.length; i++){
+      if(collectSrc[i] !== undefined){
+        newDiv(i);
+        createNewCollect(i)
+      }
     }
   }
 }

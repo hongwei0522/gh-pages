@@ -553,8 +553,10 @@ table {
         opacity: 0.7;
     }
     .loginTitle{
-        margin-top: 120px;
-        margin-left: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
     .test{
         top: 20%;
