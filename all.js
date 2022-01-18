@@ -479,6 +479,3 @@ forgetCode.addEventListener("click", function(){
     alert(error.message)
   });
 })
-
-
-//收藏 判斷會員 

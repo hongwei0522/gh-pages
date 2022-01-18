@@ -83,6 +83,7 @@ function createI(){
 }
 //變更localstorage的順序
 function createNewCollect(i){
+  console.log(i)
   let memberDeleteButton = document.getElementById("memberDelete" + [i]);
   let memberDiv = document.getElementById("memberDiv" + [i]);
   let number = [i];
