@@ -17,7 +17,6 @@ memberProfile.addEventListener("click", function(){
   document.getElementById("memberCollectDiv").style.display == "none" ){
     document.getElementById("memberInfo").style.display = "block";
     document.getElementById("memberCollectDiv").style.display = "none";
-    console.log(123)
   }else
     document.getElementById("memberInfo").style.display = "block";
     document.getElementById("memberCollectDiv").style.display = "none";
@@ -83,7 +82,6 @@ function createI(){
 }
 //變更localstorage的順序
 function createNewCollect(i){
-  console.log(i)
   let memberDeleteButton = document.getElementById("memberDelete" + [i]);
   let memberDiv = document.getElementById("memberDiv" + [i]);
   let number = [i];
@@ -99,13 +97,10 @@ function createNewCollect(i){
 }
 //新增收藏DIV
 function newDiv(i){
-  console.log(i)
   let memberCollectDiv = document.getElementById("memberCollectDivstyle");
   let memberDiv = document.createElement("div");
   memberDiv.className = "member-collect";
   memberDiv.id = "memberDiv" + [i];
-  console.log(memberCollectDiv)
-  console.log(memberDiv)
   memberCollectDiv.appendChild(memberDiv);
   let memberPhoto = document.createElement("img");
   memberPhoto.className = "member-classphoto";
@@ -163,7 +158,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         phone: memberPhone.value,
         mail: memberEmail.value,
       }));
-      console.log(memberPhone)
     }
     //取消
     function cancelInformation(){

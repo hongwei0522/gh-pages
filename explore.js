@@ -110,9 +110,6 @@ hideSearch.addEventListener("click", function(){
     //新增星星
   var bg3BlockURL =	"https://frankyeah.github.io/Front-Enter/images/star-border.svg";
   var bg3BlockURL2 = "https://frankyeah.github.io/Front-Enter/images/star-background.svg"
-  // for(var j =0; j < 9; j ++){
-    // let bg3Block = document.getElementById("bg3Block" + [j]);
-    // console.log(bg3Block)
     //白星星
     let bg3BlockCollect = document.createElement("DIV");
     bg3BlockCollect.className = "bg3BlockCollect";
@@ -133,7 +130,6 @@ hideSearch.addEventListener("click", function(){
   //   //判斷localStorage
     let srcClass = document.getElementById("locationimg" + [j]).src;
     let nameClass = document.getElementById("locationh1" + [j]).innerHTML;
-    console.log('execute')
     if(localStorage.getItem('name') == null){
       
     }else{
@@ -175,7 +171,6 @@ hideSearch.addEventListener("click", function(){
 
       for(var k = 0; k < 9; k++){
         if(nameClass == JSON.parse(localStorage.getItem('name'))[k]){
-          console.log('delete me')
           srcClassAll.splice(k,1);
           nameClassAll.splice(k,1);
           localStorage.setItem('src',JSON.stringify(srcClassAll));
@@ -183,7 +178,6 @@ hideSearch.addEventListener("click", function(){
         }
       } 
     }
-  // }  
   } 
 
   var srcClassAll = [];
@@ -196,15 +190,12 @@ hideSearch.addEventListener("click", function(){
   var oneclass = document.getElementById('oneclass');
  
   allclass.addEventListener('click',function(){
-    // bg3.innerHTML = ""
-    // createSelectElement(dataAll, dataAll.length)
     clickCategory( 'skill', '前端')
   })
 
   smallclass.addEventListener('click',function(){
     clickCategory( 'classType', '小班制')
   }) 
-    // var smalldata = dataAll.filter(word => word.classType == '小班制');
   
   stockclass.addEventListener('click',function(){
     clickCategory('classType', '大班制')

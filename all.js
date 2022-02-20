@@ -195,11 +195,9 @@ var ButtonClick = 0;
       UL.onclick = FourthButton;
       ButtonClick++;
     }else if(ButtonClick == 4){
-      console.log('4')
       UL.onclick = FifthButton;
       ButtonClick++;
     }else if(ButtonClick == 5){
-      console.log('5')
       UL.onclick = LastButton;
     }
   }
@@ -271,14 +269,12 @@ getISS(e)
 }
 
 async function getISS(e) {
-  console.log('getcss')
 
   const course_url = 'https://front-enter.firebaseio.com/list.json';
 
   const response = await fetch(course_url);
   var selectdata = null
   selectdata = await response.json();
-  console.log(selectdata)
   var SuitableClass = []
   for(i = 0; i < selectTestGo.length; i++){
     for(j =0; j < selectdata.length; j++){    
@@ -319,18 +315,12 @@ async function getISS(e) {
   for (var k = 0; k < selectdata.length; k++){
     if(maxEl == selectdata[k].name){
         btnUrl = btnUrl + selectdata[k].creatTime
-        console.log(selectdata[k].name)
     }
   }
   if(maxEl == undefined){
     btnUrl = "./explore.html";
     maxEl = "請參考各種課程";
   }
-  console.log(btnUrl)
-  console.log(maxEl)
-  console.log(maxCount)
-  
-
   
   selectTestGo.push(e.target.value)
   test.testText()
@@ -401,7 +391,7 @@ registerbtn.addEventListener("click", function(e){
   e.preventDefault();
   firebase.auth().createUserWithEmailAndPassword(inputMail.value, inputCode.value)
   .then(() => {
-      console.log("註冊成功");
+      alert("註冊成功");
   })
 })
 
@@ -409,15 +399,11 @@ registerbtn.addEventListener("click", function(e){
 loginbtn.addEventListener("click", function(e){
   //preventDefaul 防止跳頁
   e.preventDefault();
-  console.log(inputMail)
-  console.log(inputMail.value)
   firebase.auth().signInWithEmailAndPassword(inputMail.value, inputCode.value)
   .then(() => {
     var user = firebase.auth().currentUser;
     var log = document.getElementById('log');
     if (user) {
-      console.log(user);
-      console.log(firebase.auth())
       log.innerHTML = '<a class="font" href="./member.html">會員</a>';
       document.getElementById("login").style.display = "none" ,
       document.getElementById("hide3").style.display = "none";

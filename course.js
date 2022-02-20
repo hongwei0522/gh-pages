@@ -3,13 +3,10 @@
         async function get() {
             const response = await fetch(courseurl);
             const dataAll = await response.json();
-            
-            // console.log(location.searchParams.toString()); 
-            
+
             function courseUrl(){
               for (var i = 0; i < dataAll.length; i++){
                 var courseHref = "?tid=" + dataAll[i].creatTime
-                // console.log(dataAll[i].name)
                 if(courseHref == location.search){
                 document.getElementById('bg1word1').textContent = dataAll[i].name;
                 document.getElementById('coursep').innerHTML = dataAll[i].content;
@@ -39,23 +36,18 @@
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
         currentslideimg = 5;
         currentslideimg--
-        console.log(currentslideimg)
       }else if(currentslideimg == 4){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
         currentslideimg--
-        console.log(currentslideimg)
       }else if(currentslideimg == 3){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
         currentslideimg--
-        console.log(currentslideimg)
       }else if(currentslideimg == 2){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
         currentslideimg--
-        console.log(currentslideimg)
       }else if(currentslideimg == 1){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
         currentslideimg--
-        console.log(currentslideimg)
       }
   })
 
@@ -63,24 +55,19 @@
       if(currentslideimg == 0){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/AppWorksShool-rectangle.jpg`);
         currentslideimg++
-        console.log(currentslideimg)
       }else if(currentslideimg == 4){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/7.jpg`);
         currentslideimg = -1;
         currentslideimg++
-        console.log(currentslideimg)
       }else if(currentslideimg == 3){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/15.jpg`);
         currentslideimg++
-        console.log(currentslideimg)
       }else if(currentslideimg == 2){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/13.jpg`);
         currentslideimg++
-        console.log(currentslideimg)
       }else if(currentslideimg == 1){
         slideimg.setAttribute("src",`https://frankyeah.github.io/Front-Enter/images/2.jpg`);
         currentslideimg++
-        console.log(currentslideimg)
       }
   })
 
