@@ -1,11 +1,15 @@
   //JSON
   var dataAll = null
   var bg3 = document.getElementById('bg3')
-  const courseUrl = 'https://front-enter.firebaseio.com/list.json';
+   
+  // const courseUrl = 'https://front-enter.firebaseio.com/article.json';
+  // const courseUrl = 'https://frankyeah.github.io/Front-Enter/json/front-enter-export%20(12).json';
 
   async function get() {
-    const response = await fetch(courseUrl);
+    const response = await fetch("./json/list.json");
     dataAll = await response.json();
+    console.log(dataAll)
+    dataAll = dataAll.article
     let inputText = (new URL(document.location)).searchParams.get('tid');
     var selectData = []
 
